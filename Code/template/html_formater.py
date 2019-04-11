@@ -40,22 +40,22 @@ string="""
         <input id="rufnummer_tel" type="text" name="rufnummer_tel" class=page1>
         <input id="e_mail" type="text" name="e_mail" class=page1>
         <input id="internetadresse" type="text" name="internetadresse" class=page1>
-        
-        <input id="art_taetigkeit" type="text" name="art_taetigkeit" class=page1>   
-"""
+
+        <input id="art_taetigkeit" type="text" name="art_taetigkeit" class=page1>"""
 
 
 
 
 def __init__():
     strings = string.split(">")
-    inputs = strings[0:-1]
+    inputs = strings[0:]
     input_names=[]
     for i in inputs:
-        if i[18] =="=":   
-            index = i.index("type")
-            input_names.append(i[20:index-2])
-        elif i[27]=="=":   
-            index = i.index("type")
-            input_names.append(i[29:index-2]) 
+        if len(i) != 0:
+            if i[18] =="=":
+                index = i.index("type")
+                input_names.append(i[20:index-2])
+            elif i[19]=="=":   
+                index = i.index("type")
+                input_names.append(i[21:index-2])
     return input_names
