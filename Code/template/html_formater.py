@@ -59,3 +59,4 @@ def __init__():
                 index = i.index("type")
                 input_names.append(i[21:index-2])
     return input_names
+

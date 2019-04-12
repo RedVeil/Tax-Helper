@@ -3,62 +3,106 @@ document.addEventListener("DOMContentLoaded",function() {
 let counter = 0
 var dictInputs= {"name": "", "vorname":"", "strasse":""}
 
+
 const start = document.querySelector(".start");
-start.addEventListener('click', createParagraph,);
+start.addEventListener('click', createCard);
+
+document.getElementById("submitAll").style.visibility = "hidden";
+if (counter === 1){
+    document.getElementById("submitAll").style.visibility = "visible";
+}
 
 
-
-function createParagraph() {
+function createCard() {
+    counter ++;
+    //Destroy previous card
     let input_key = Object.keys(dictInputs)[counter];
-    if (counter === 0){
+    if (counter === 1){
         start.parentNode.removeChild(start);
     }
+    //Create new card
     var card = document.createElement('div');
     var input = document.createElement("INPUT");
-    var submit = document.createElement("button");
+    var submitButton = document.createElement("button");
     input.setAttribute("type", "text");
     input.setAttribute("id", "input");
     input.setAttribute("placeholder", input_key);
-    submit.setAttribute("value", "test")
-    submit.setAttribute("class", "button")
-    submit.addEventListener('click', addToDict);
+    submitButton.setAttribute("class", "button")
+    submitButton.addEventListener('click', addToDict);
+    submitButton.innerHTML = counter;
+    //Create Back Button if not first card
+    if (counter > 1){
+        let previousCard = document.getElementById(counter-1)
+        previousCard.parentNode.removeChild(previousCard)
+        var backButton = document.createElement("button")
+        backButton.setAttribute("class", "button");
+        backButton.addEventListener('click', lastCard);
+        backButton.innerHTML = "back";
+        card.appendChild(backButton)
+
+    }
     card.appendChild(input);
-    card.appendChild(submit);
-    card.setAttribute("id", input_key)
+    card.appendChild(submitButton);
+    card.setAttribute("id", counter);
+    card.setAttribute("class", "card");
     document.body.appendChild(card);
 };
 
-/*function createButton(){
-    const submitAll = document.createElement("button");
-    submitAll.setAttribute("name", "helloButton");
-    submitAll.setAttribute("class", "button")
-    submitAll.addEventListener('click', safeToDb);
-    document.body.appendChild(submitAll);
-};
-
 function safeToDb() {
-};
-*/
 
+};
+
+//View last Card
+function lastCard(){
+    counter --;
+    //Destroy previous card
+    if (counter > 0){
+        let previousCard = document.getElementById(counter+1)
+        previousCard.parentNode.removeChild(previousCard)
+    }
+    //Create old card
+    let input_key = Object.keys(dictInputs)[counter];
+    var card = document.createElement('div');
+    var input = document.createElement("INPUT");
+    var submitButton = document.createElement("button");
+    input.setAttribute("type", "text");
+    input.setAttribute("id", "input");
+    input.setAttribute("placeholder", input_key);
+    input.setAttribute("value",dictInputs[input_key]);
+    submitButton.setAttribute("class", "button")
+    submitButton.addEventListener('click', addToDict);
+    submitButton.innerHTML = counter;
+    //Create Back Button if not first card
+    if (counter > 1){
+        var backButton = document.createElement("button")
+        backButton.setAttribute("class", "button");
+        backButton.addEventListener('click', lastCard);
+        backButton.innerHTML = "back";
+        card.appendChild(backButton)
+    }
+    card.appendChild(input);
+    card.appendChild(submitButton);
+    card.setAttribute("id", counter);
+    card.className = "card";
+    document.body.appendChild(card);
+};
+
+//Add Value to Dictionary
 function addToDict(){
     let input_key = Object.keys(dictInputs)[counter];
     var input = document.getElementById("input");  
     dictInputs[input_key] = input.value;
-    var paragraphEl = document.createElement('p');
-    paragraphEl.textContent = dictInputs[input_key];
-    document.body.appendChild(paragraphEl);
-    //destroy or hide previous card
-    counter += 1
-    createParagraph();
+    var form = document.getElementById("form")
+    var safeInput = document.createElement("INPUT");
+    safeInput.setAttribute("type", "text")
+    createCard();
+
 };
 });
 
 
 /*
-1. move through list of inputs_names with submit of createParagraph
-2. Safe input as variable
 3. submit variables to backend
-4. create back button
 5. create cards and visuable feedback
 6. create info button
 7. create progress bar

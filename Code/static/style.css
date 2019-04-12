@@ -1,4 +1,4 @@
-button {
+.button {
   background-color: #4CAF50; /* Green */
   border: none;
   color: white;
@@ -7,4 +7,10 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-}
+};
+
+.card {
+  background-color: #060606;
+  width: 1000px;
+  height: 300px;
+};
