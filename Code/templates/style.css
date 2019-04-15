@@ -17,3 +17,9 @@
   margin: auto;
   border: 3px solid #73AD21;
 };
+
+input{
+  padding : 12px, 12px;
+  border: none;
+  border-bottom: 2px solid black;
+};

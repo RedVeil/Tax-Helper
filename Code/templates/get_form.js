@@ -19,3 +19,11 @@ function safeToDb() {
     submitForm.appendChild(userInputButton)
     document.body.appendChild(submitForm)
 };
+
+
+
+
+var request = new XMLHttpRequest();
+request.open('POST', '/my/url', true);
+request.setRequestHeader('Content-Type', '/test; charset=UTF-8');
+request.send(data);

@@ -5,36 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
     <title>Test Page</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
     <script src=script.js ></script>
-    <style>
-      .button {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-      };
-
-      .card {
-        background-color: blueviolet;
-        max-width: 500px;
-        margin: auto;
-        border: 3px solid #73AD21;
-      };
-      </style>
-
   </head>
   <body>
     <main>
         <button class="start">Click me</button>
         <form action="" method="POST" id="form">
-          <form method="get" action="/page2">
-            <button type="submit" id="test">test</button>
+          <a hidden href="page2.html">Safe your Data</a>
         </form>
         </form>
         <button type="submit" id="submitAll" onclick="safeToDb()">Submit All</button>

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded",function() {
 
 let counter = 0
+//get dict-keys from database
 var dictInputs= {"name": "", "vorname":"", "strasse":""}
 
 
@@ -26,6 +27,7 @@ function createCard() {
     input.setAttribute("type", "text");
     input.setAttribute("id", "input");
     input.setAttribute("placeholder", input_key);
+    input.setAttribute("class", "input")
     submitButton.setAttribute("class", "button")
     submitButton.addEventListener('click', addToDict);
     submitButton.innerHTML = counter;
@@ -48,9 +50,21 @@ function createCard() {
 };
 
 function safeToDb() {
+    submitAllButton.innerHTML = "submit"
+    var submitForm = document.getElementById("form") //createElement("form")
+    submitForm.setAttribute("id", "submitForm")
+    submitForm.setAttribute("name", "submitForm")
+    for (var x in dictInputs) {
+        var submitInput = document.createElement("input")
+        submitInput.setAttribute("name", x)
+        submitInput.setAttribute("value",dictInputs[x]);
+        //submitInput.setAttribute("hidden");
+        submitForm.appendChild(submitInput)
+    }
+   // document.body.appendChild(submitForm)
     //var inputsJson = JSON.stringify(dictInputs);
     // send to server
-    var person = alert("Your Data is safe now");
+    alert("Your Data is safe now");
 };
 
 

@@ -1,5 +1,7 @@
 from PIL import Image, ImageFont, ImageDraw
+from fpdf import FPDF
 from pathlib import Path
+pdf = FPDF()
 #from . import db_connector as db
 
 coordinates_page1 = {'name': [51, 82], 'vorname': [1585, 755], 'geburtsname': [215, 855], 'ausgeuebter_beruf': [215, 955], 'geburtsdatum': [1820, 955], 'strasse': [215, 1050], 'hausnummer': [215, 1150], 'hausnummer_zusatz': [512, 1150], 'adressergaenzung': [930, 1150], 'postleitzahl': [215, 1250], 'wohnort': [572, 1250], 'identifikationsmerkmale': [572, 1450], 'reli': [2170, 1450], 'datum': [215, 1670], 'datum2': [750, 1670], 'datum3': [1285, 1670], 'datum4': [1820, 1670],
@@ -25,12 +27,8 @@ coordinates_page6 = {}
 coordinates_page7 = {}
 coordinates_page8 = {}
 
-
-
-
-
-def printer(coordinates):
-    im = Image.open("Steuerliche Erfassung-3.png")
+def printer(coordinates,counter):
+    im = Image.open(f"Steuerliche Erfassung-{counter}.png")
     roboto = ImageFont.truetype("Roboto-Regular.ttf", size=35)
     d = ImageDraw.Draw(im)  
     text_color= (0,0,0)
@@ -38,6 +36,25 @@ def printer(coordinates):
         location = value
         text = str(key)
         d.text(location, text, font=roboto, fill=text_color)
-    im.save("drawn_grid4.png")
+    im.save(f"drawn_grid{counter}.png")
 
-printer(coordinates_page3)
+#img1 = Image.open("drawn_grid1.jpg")
+#img2 = Image.open("drawn_grid2.jpg")
+#im_list = [img1,img2]
+
+#for image in im_list:
+    #pdf.add_page()
+    #pdf.image(image)
+#pdf.output("test2.pdf", "F")
+
+
+
+printer(coordinates_page1,1)
+printer(coordinates_page2,2)
+printer(coordinates_page3,3)
+#printer(coordinates_page4,4)
+#printer(coordinates_page5,5)
+#printer(coordinates_page6,6)
+#printer(coordinates_page7,7)
+
+#makePdf("test", ["drawn_grid1","drawn_grid2","drawn_grid3"])
