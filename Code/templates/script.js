@@ -7,11 +7,8 @@ var dictInputs= {"name": "", "vorname":"", "strasse":""}
 const start = document.querySelector(".start");
 start.addEventListener('click', createCard);
 
-document.getElementById("submitAll").style.visibility = "hidden";
-if (counter === 1){
-    document.getElementById("submitAll").style.visibility = "visible";
-}
-
+const submitAllButton = document.getElementById("submitAll")
+submitAllButton.style.visibility = "hidden";
 
 function createCard() {
     counter ++;
@@ -19,6 +16,8 @@ function createCard() {
     let input_key = Object.keys(dictInputs)[counter];
     if (counter === 1){
         start.parentNode.removeChild(start);
+        submitAllButton.style.visibility = "visible";
+        submitAllButton.addEventListener('click', safeToDb);
     }
     //Create new card
     var card = document.createElement('div');
@@ -49,8 +48,11 @@ function createCard() {
 };
 
 function safeToDb() {
-
+    //var inputsJson = JSON.stringify(dictInputs);
+    // send to server
+    var person = alert("Your Data is safe now");
 };
+
 
 //View last Card
 function lastCard(){
@@ -87,7 +89,7 @@ function lastCard(){
     document.body.appendChild(card);
 };
 
-//Add Value to Dictionary
+//Add Value to Object
 function addToDict(){
     let input_key = Object.keys(dictInputs)[counter];
     var input = document.getElementById("input");  
@@ -102,6 +104,7 @@ function addToDict(){
 
 
 /*
+!!!dictInputs - "name" - not in form!!!
 3. submit variables to backend
 5. create cards and visuable feedback
 6. create info button

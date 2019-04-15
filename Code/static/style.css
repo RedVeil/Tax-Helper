@@ -1,5 +1,5 @@
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -7,10 +7,13 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 };
 
 .card {
-  background-color: #060606;
-  width: 1000px;
-  height: 300px;
+  background-color: blueviolet;
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
 };
