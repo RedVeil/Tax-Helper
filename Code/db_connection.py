@@ -1,5 +1,8 @@
 import sqlite3
 import json
+from flask import render_template, request, Blueprint,jsonify
+
+bp = Blueprint("db_connection", __name__)
 
 def write_to_db(key,value):
     db_connection = sqlite3.connect('tax.db')
@@ -25,14 +28,18 @@ def set_up():
     db_cursor.execute(f"SELECT Title FROM input_fields")
     titles_temp = db_cursor.fetchall()
     for i in titles_temp:
+
         titles.append(i[0])
     db_cursor.execute(f"SELECT Tooltip FROM input_fields")
     tooltips_temp = db_cursor.fetchall()
     for i in tooltips_temp:
         tooltips.append(i[0])
     db_cursor.close()
-    #send to js
-    
+    form = {}
+    print(input_keys)
+    for counter in range(len(input_keys)):
+        form[input_keys[counter]] = [titles[counter],tooltips[counter]]
+    json_form = json.dumps(form, ensure_ascii=False)
     
 def load_from_db(input_key):
     db_connection = sqlite3.connect('tax.db')
@@ -81,3 +88,11 @@ def safe_data_and_retrieve_location():
         elif ID >= 601:
             page7[json_object[key]] =  location
     return page1,page2,page3,page4,page5,page6,page7
+
+set_up()
+
+@bp.route('/save', methods=['POST'])
+def get_post_json():    
+    data = request.get_json()
+
+    return jsonify(status="success", data=data)

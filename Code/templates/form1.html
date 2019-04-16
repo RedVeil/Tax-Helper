@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h1>{% block title %}Form Page{% endblock %}</h1>
+{% endblock %}
+{% block content %}
+  <form action="" method="POST" id="1">
+    <input id='finanzamt' type='text' name='finanzamt' class='input_field'>
+    <input id='submit1' type='submit' name='submit' class='submit'>
+  </form>
+  <form hidden action="" method="POST" id="2">
+    <fieldset>
+      <legend>Personal information:</legend>
+      <input id='u_lastname' type='text' name='u_lastname' class='input_field'>
+      <input id='u_firstname' type='text' name='u_firstname' class='input_field'>
+      <input id='u_family_name' type='text' name='u_family_name' class='input_field'>
+      <input id='u_birthday' type='text' name='u_birthday' class='input_field'>
+      <input id='u_strasse' type='text' name='u_strasse' class='input_field'>
+      <input id='u_hausnummer' type='text' name='u_hausnummer' class='input_field'>
+      <input id='u_hausnummer_zusatz' type='text' name='u_hausnummer_zusatz' class='input_field'>
+      <input id='u_adressergaenzung' type='text' name='u_adressergaenzung' class='input_field'>
+      <input id='u_postleitzahl' type='text' name='u_postleitzahl' class='input_field'>
+      <input id='u_city' type='text' name='u_city' class='input_field'>
+      <input id='submit2' type='submit' name='submit' class='submit'>
+      <button type="submit" id="back" onclick="back()">Back</button>
+    </fieldset>
+  <form hidden action="" method="POST" id="3">
+    <fieldset>
+      <input id='tel_int_vorwahl' type='text' name='tel_int_vorwahl' class='input_field'>
+      <input id='vorwahl_tel' type='text' name='vorwahl_tel' class='input_field'>
+      <input id='rufnummer_tel' type='text' name='rufnummer_tel' class='input_field'>
+      <input id='e_mail' type='text' name='e_mail' class='input_field'>
+      <input id='website' type='text' name='website' class='input_field'>
+      <input id='submit3' type='submit' name='submit' class='submit'>
+      <button type="submit" id="back" onclick="back()">Back</button>
+    </fieldset>
+  </form>
+  <form hidden action="" method="POST"id="4">
+    <input id='u_current_job' type='text' name='u_current_job' class='input_field'>
+    <input id='submit4' type='submit' name='submit' class='submit'>
+    <button type="submit" id="back" onclick="back()">Back</button>
+  </form>
+  <form hidden action="" method="POST"id="5">
+    <input type="radio" id='u_reli' name='u_reli' value="EV" checked> Evangelisch<br>
+    <input type="radio" id='u_reli' name='u_reli' value="RK"> Römisch-Katolisch<br>
+    <input type="radio" id='u_reli' name='u_reli' value="VD"> Nicht kirchensteuerpflichtig<br>
+    <input id='submit5' type='submit' name='submit' class='submit'>
+    <button type="submit" id="back" onclick="back()">Back</button>
+  </form>
+  <div hidden id="6">
+    <p>Are you German?</p>
+    <button type="submit6" id="submitAll" onclick="german()">Yes</button>
+    <button type="submit6" id="submitAll" onclick="notGerman()">No</button>
+    <button type="submit" id="back" onclick="back()">Back</button>
+  </div>
+  <form hidden action="" method="POST" id="7"> 
+    <input id='u_tax_id' type='text' name='u_tax_id' class='input_field'>
+    <input id='submit7' type='submit' name='submit' class='submit'>
+    <button type="submit" id="back" onclick="back()">Back</button>
+  </form> 
+{% endblock %}
