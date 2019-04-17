@@ -1,20 +1,26 @@
 document.addEventListener("DOMContentLoaded",function() {
 
 localStorage.setItem("counter", 1)
-var counter = localStorage.getItem("counter")
+
+
+//test
+var finanzamt = document.getElementById("finanzamt")
+var userValue = localStorage.getItem("finanzamt")
+if (userValue !== ""){
+    finanzamt.setAttribute("value", userValue)
+}
 
 
 
-submitCounter = "submit".concat(counter.toString());
-submit = document.getElementById("submit1");
-//submit.innerHTML = submitCounter;
+//test end
+
+submit = document.getElementById("submit");
 submit.addEventListener('click', next)
 
 function next(){
     counter ++
     var input_fields = document.getElementsByClassName("input_field")
     for (i=0, len=Object.keys(input_fields).length; i<len; i++){
-        console.log(i)
         localStorage.setItem(input_fields[i].name, input_fields[i].value)
 
     };
