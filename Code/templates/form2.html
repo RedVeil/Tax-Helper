@@ -3,12 +3,17 @@
 {% endblock %}
 {% block content %}
 <div id="formContainer2" class="formContainer">
+  <div id="colorBlock"></div>
   <form action="" method="POST" id="form2">
     <h1>Personal Informations</h1>
-    <input id='u_lastname' type='text' name='u_lastname' class='input_field' placeholder="u_lastname">
-    <input id='u_firstname' type='text' name='u_firstname' class='input_field'>
-    <input id='u_family_name' type='text' name='u_family_name' class='input_field'>
+    <h2>I am...</h2>
+    <input id='u_lastname' type='text' name='u_lastname' class='input_field' placeholder="Family name">
+    <input id='u_firstname' type='text' name='u_firstname' class='input_field' placeholder="First name" onfocus="show()" onblur="hide()">
+    <h2 id="testh2">This is my birth name</h2>
+    <input id='u_birth_name' type='text' name='u_birth_name' class='input_field'>
+    <h2>and my birthday</h2>
     <input id='u_birthday' type='text' name='u_birthday' class='input_field'>
+    <h2>This is were I live...</h2>
     <input id='u_strasse' type='text' name='u_strasse' class='input_field'>
     <input id='u_hausnummer' type='text' name='u_hausnummer' class='input_field'>
     <input id='u_hausnummer_zusatz' type='text' name='u_hausnummer_zusatz' class='input_field'>
@@ -16,7 +21,8 @@
     <input id='u_postleitzahl' type='text' name='u_postleitzahl' class='input_field'>
     <input id='u_city' type='text' name='u_city' class='input_field' placeholder="u_city"><br>
     <a href="/main" id="back"><</a>
-    <input id='submit' type='submit' name='submit' class='submit'value=">">
+    <a href="/saved" id="save">save</a>
+    <a href="/main3" id="submit" class="submit" name="test" onclick="next()">></a>
   </form>
 </div>
 {% endblock %}

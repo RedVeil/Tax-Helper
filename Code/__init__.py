@@ -7,16 +7,11 @@ def create_app():
     # create and configure the app
     app = Flask(__name__,)
     app.config['SECRET_KEY'] = 'test'
-    
-    class SelectionForm(FlaskForm):
-        submit = SubmitField("Start")
+
 
     @app.route('/', methods=("GET","POST"))    
     def hello():
-        form = SelectionForm()
-        if request.method == "POST":
-            return redirect("/main")
-        return render_template("index.html", form = form)
+        return render_template("index.html")
 
     from . import mainpage
     app.register_blueprint(mainpage.bp)

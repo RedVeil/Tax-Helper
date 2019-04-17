@@ -1,31 +1,33 @@
 html { font-family: sans-serif; background: #eee;}
 body { max-width: 960px; margin: 0 auto; background: white;}
 h1 {margin: 0.5rem auto 0.5rem auto; font-family: sans-serif; color: #000000;}
+h2{color:black;}
 p {font-family: sans-serif; color: black}
 
 input[type=text]{
   border: none;
-  border-bottom: 1px solid black;}
+  background: white;
+  border-bottom: 1px solid rgb(73, 73, 73);}
 
-input[type=submit]{
+#submit{
   border: none;
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(73, 73, 73);
+  text-decoration: none;
   color: white;
   padding: 0.5rem 0.75rem;
   border-radius: 50%;
   transition-duration: 0.4s;
   margin: 0.5rem auto 1rem auto;
-
+  box-shadow: 2px 2px 5px grey;
 }
 
-input[type=submit]:hover{
-  background-color: rgb(124, 124, 124);
+#submit:hover{
+  background-color: rgb(131, 131, 131);
 }
 
 #back{
   border: none;
-  background-color: rgb(70, 70, 70);
-  font-size: 0.8rem;
+  background-color: rgb(73, 73, 73);
   text-decoration: none;
   color: white;
   padding: 0.5rem 0.75rem;
@@ -34,10 +36,11 @@ input[type=submit]:hover{
 }
 
 #back:hover{
-  background-color: rgb(124, 124, 124);
+  background-color: rgb(131, 131, 131);
 }
 
 form {
+  width: 50%;
   display:grid;
   justify-content: center;
   align-content: center;
@@ -46,5 +49,13 @@ form {
 
 .formContainer{
   background-color: rgb(184, 184, 184);
+  box-shadow: 10px 10px 5px grey;
   margin: 50px 0 0 0;
+}
+
+#colorBlock{
+  display: block;
+  height:auto;
+  width:50%;
+  background: rgb( 191, 57, 69);
 }

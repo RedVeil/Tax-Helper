@@ -9,5 +9,26 @@
   {% for message in get_flashed_messages() %}
     <div class="flash">{{ message }}</div>
   {% endfor %}
-  {% block content %}{% endblock %}
+  {% block content %}
+  
+  {% endblock %}
+  <script>
+      function next(){
+      var counter = localStorage.getItem("counter")
+      var newCounter = parseInt(counter)
+      localStorage.setItem("counter", newCounter +1)
+      var input_fields = document.getElementsByClassName("input_field")
+      for (i=0, len=Object.keys(input_fields).length; i<len; i++){
+          localStorage.setItem(input_fields[i].name, input_fields[i].value)
+      };
+    };
+
+    function show(){
+      document.getElementById("testh2").style.visibility = "visible";
+    }
+    function hide(){
+      document.getElementById("testh2").style.visibility = "hidden";
+    }
+
+    </script>  
 </section>
