@@ -2,7 +2,18 @@ from PIL import Image, ImageFont, ImageDraw
 from fpdf import FPDF
 from pathlib import Path
 from db_connection import safe_data_and_retrieve_location
+import os
 pdf = FPDF()
+
+
+def make_pdf(image_list):
+    pdf1_filename = "tesd3.pdf"
+    img1 = Image.open("testimg1.jpg")
+    img1.save(pdf1_filename, "PDF" ,resolution=100.0, save_all=True, append_images=image_list[1:])
+    for i in range(len(image_list)):
+        os.remove(f"testimg{i+1}.jpg")
+    
+
 
 def __init__():
     pages = safe_data_and_retrieve_location()
@@ -16,25 +27,12 @@ def __init__():
             location = value
             text = str(key)
             d.text(location, text, font=roboto, fill=text_color)
+        im.save(f"testimg{i+1}.jpg", quality=50)
         im_list.append(im)
+    make_pdf(im_list)
     
-        #im.save(f"testimg{i+1}.jpg", quality=50)
 
-    #make_pdf()
 
-def make_pdf():
-    filepath = "drawn_grid2.png"
-    newfilename = "test2.pdf"
 
-    im = Image.open(filepath)
-    im = im.convert("RGB")
-    im.save("test2.jpg", quality=100)
-    im1 = Image.open("test.jpg")
-    im2 = Image.open("/test2.jpg")
-    im_list = [im1,im2]
 
-    pdf1_filename = "tester.pdf"
-    im1.save(pdf1_filename, "PDF" ,resolution=100.0, save_all=True, append_images=im_list)
-
-#make_pdf()
 __init__()

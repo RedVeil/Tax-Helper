@@ -2,7 +2,9 @@
 {% block header %}
 {% endblock %}
 {% block content %}
-  <div id="formContainer1" class="formContainer">
+<div id="container main" class="grid">
+  <div class="textSide">Text</div>
+  <div class="formSide">
     <form action="" method="POST" id="form1">
         <h1>Your Finanzamt</h1>
         <input id='finanzamt' type='text' name='finanzamt' class='input_field' placeholder="Finanzamt" autofocus ><br>
@@ -10,4 +12,5 @@
         <a href="/main2" id="submit" class="submit" name="test2"onclick="next()">></a>
     </form>
   </div>
+</div>
 {% endblock %}

@@ -36,7 +36,6 @@ def set_up():
         tooltips.append(i[0])
     db_cursor.close()
     form = {}
-    print(input_keys)
     for counter in range(len(input_keys)):
         form[input_keys[counter]] = [titles[counter],tooltips[counter]]
     json_form = json.dumps(form, ensure_ascii=False)

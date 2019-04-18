@@ -19,6 +19,12 @@ def mainpage3():
         return redirect("/main4")
     return render_template("form3.html")
 
+@bp.route('/main4', methods=("GET","POST"))
+def mainpage4():
+    if request.method == "POST":
+        return redirect("/main5")
+    return render_template("form4.html")
+
 @bp.route('/saved', methods=["GET","POST"])
 def recieve_json():
     #data = request.get_json()

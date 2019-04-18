@@ -2,16 +2,27 @@
 <title>{% block title %}{% endblock %} Tax Helper</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <script type="text/javascript" src="/static/script.js" ></script>
+<nav class="navigation">
+  <h1>Tax Helper</h1>
+  <ul>
+    <li><a href="/">Landing Page</a>
+    <li><a href="saved">Save progress</a>
+  </ul>
+</nav>
 <section class="content">
   <header>
     {% block header %}{% endblock %}
   </header>
   {% for message in get_flashed_messages() %}
     <div class="flash">{{ message }}</div>
-  {% endfor %}
+  {% endfor %} 
+  <body>
   {% block content %}
   
   {% endblock %}
+  <footer><h3>Footer</h3></footer>
+  </body>
+
   <script>
       function next(){
       var counter = localStorage.getItem("counter")
@@ -25,9 +36,14 @@
 
     function show(){
       document.getElementById("testh2").style.visibility = "visible";
-    }
+    };
+
     function hide(){
       document.getElementById("testh2").style.visibility = "hidden";
+    };
+
+    function clear(){
+      localStorage.clear()
     }
 
     </script>  
