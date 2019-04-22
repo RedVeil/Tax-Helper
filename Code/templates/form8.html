@@ -2,9 +2,24 @@
 {% block header %}
 {% endblock %}
 {% block content %}
-<div id="form2" class="formContainer"></div>
-    <form action="" method="POST" id="3">
-
-    </form>
-</div>
+<div id="container main" class="grid">
+        <div class="textSide"></div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Personal Informations</h1>
+            </div>
+            <div class="form">
+              <form action="" method="POST" id="form2">
+                    <p>Since when?</p>
+                    <input id='marriage_date' type='text' name='marriage_date' class='input_field'>
+              </form>
+              </div>
+            <div class="button">
+              <div class="centerButton">
+                <a href="/main7" id="back" onclick="back()"><</a>
+                <a href="/main9" id="submit" class="submit" name="test" onclick="next()">></a>
+              </div>
+            </div>
+        </div>
+      </div>
 {% endblock %}

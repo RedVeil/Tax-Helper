@@ -2,9 +2,35 @@
 {% block header %}
 {% endblock %}
 {% block content %}
-<div id="form2" class="formContainer"></div>
-    <form action="" method="POST" id="3">
-
-    </form>
+<div id="container main" class="grid">
+        <div class="textSide">Text</div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Not So Personal Informations</h1>
+            </div>
+            <div class="form">
+              <form action="" method="POST" id="form2">
+                    <input id='steuerberater' type='text' name='steuerberater' class='input_field'>
+                    <input id='b_lastname' type='text' name='b_lastname' class='input_field'>
+                    <input id='b_firstname' type='text' name='b_firstname' class='input_field'>
+                    <input id='b_strasse' type='text' name='b_strasse' class='input_field'>
+                    <input id='b_hausnummer' type='text' name='b_hausnummer' class='input_field'>
+                    <input id='b_hausnummer_zusatz' type='text' name='b_hausnummer_zusatz' class='input_field'>
+                    <input id='b_adressergaenzung' type='text' name='b_adressergaenzung' class='input_field'>
+                    <input id='b_postleitzahl' type='text' name='b_postleitzahl' class='input_field'>
+                    <input id='b_ort' type='text' name='b_ort' class='input_field'>
+                    <input id='b_tel_int_vorwahl' type='text' name='b_tel_int_vorwahl' class='input_field'>
+                    <input id='b_vorwahl_tel' type='text' name='b_vorwahl_tel' class='input_field'>
+                    <input id='b_rufnummer_tel' type='text' name='b_rufnummer_tel' class='input_field'>
+                    <input id='b_e_mail' type='text' name='b_e_mail' class='input_field'>
+              </form>
+              </div>
+            <div class="button">
+                <div class="centerButton">
+                    <a href="/main11" id="back" onclick="back()"><</a>
+                    <a href="/main13" id="submit" class="submit" name="test" onclick="next()">></a>
+                </div>
+            </div>
+        </div>
 </div>
 {% endblock %}

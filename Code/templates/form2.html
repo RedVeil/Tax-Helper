@@ -3,27 +3,33 @@
 {% endblock %}
 {% block content %}
 <div id="container main" class="grid">
-  <div class="textSide">Text</div>
+  <div class="textSide"></div>
   <div class="formSide">
-    <form action="" method="POST" id="form2">
-      <h1>Personal Informations</h1>
-      <h2>I am...</h2>
-      <input id='u_lastname' type='text' name='u_lastname' class='input_field' placeholder="Family name">
-      <input id='u_firstname' type='text' name='u_firstname' class='input_field' placeholder="First name" onfocus="show()" onblur="hide()">
-      <h2 id="testh2">This is my birth name</h2>
-      <input id='u_birth_name' type='text' name='u_birth_name' class='input_field'>
-      <h2>and my birthday</h2>
-      <input id='u_birthday' type='text' name='u_birthday' class='input_field'>
-      <h2>This is were I live...</h2>
-      <input id='u_strasse' type='text' name='u_strasse' class='input_field'>
-      <input id='u_hausnummer' type='text' name='u_hausnummer' class='input_field'>
-      <input id='u_hausnummer_zusatz' type='text' name='u_hausnummer_zusatz' class='input_field'>
-      <input id='u_adressergaenzung' type='text' name='u_adressergaenzung' class='input_field'>
-      <input id='u_postleitzahl' type='text' name='u_postleitzahl' class='input_field'>
-      <input id='u_city' type='text' name='u_city' class='input_field' placeholder="u_city"><br>
-      <a href="/main" id="back"><</a>
-      <a href="/main3" id="submit" class="submit" name="test" onclick="next()">></a>
-    </form>
+      <div class="title">
+          <h1 id="title">Personal Informations</h1>
+      </div>
+      <div class="form">
+        <form action="" method="POST" id="form2">
+          <p>I am...</p>
+          <input id='u_firstname' type='text' name='u_firstname' class='input_field' placeholder="First name" onfocus="show()" onblur="hide()">
+          <input id='u_lastname' type='text' name='u_lastname' class='input_field' placeholder="Family name">
+          <p id="testh2">This is my birth name</p>
+          <input id='u_birth_name' type='text' name='u_birth_name' class='input_field' placeholder="Birth name">
+          <input id='u_birthday' type='text' name='u_birthday' class='input_field' placeholder="Birthday">
+          <p>This is were I live...</p>
+          <input id='u_strasse' type='text' name='u_strasse' class='input_field' placeholder="Street">
+          <input id='u_hausnummer' type='text' name='u_hausnummer' class='input_field' placeholder="House number">
+          <input id='u_hausnummer_zusatz' type='text' name='u_hausnummer_zusatz' class='input_field' placeholder="Add-on">
+          <input id='u_postleitzahl' type='text' name='u_postleitzahl' class='input_field' placeholder="Postal Code">
+          <input id='u_city' type='text' name='u_city' class='input_field' placeholder="City"><br>
+        </form>
+        </div>
+      <div class="button">
+        <div class="centerButton">
+          <a href="/main" id="back" onclick="back()"><</a>
+          <a href="/main3" id="submit" class="submit" name="test" onclick="next()">></a>
+        </div>
+      </div>
   </div>
 </div>
 {% endblock %}

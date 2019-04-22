@@ -34,6 +34,12 @@
       };
     };
 
+    function back(){
+      var counter = localStorage.getItem("counter")
+      var newCounter = parseInt(counter)
+      localStorage.setItem("counter", newCounter -1)
+    };
+
     function show(){
       document.getElementById("testh2").style.visibility = "visible";
     };
@@ -44,7 +50,34 @@
 
     function clear(){
       localStorage.clear()
-    }
+    };
+
+    /* Set Skip value for certain cards if answer=yes (will be checked with yesNoCheck function)*/
+    function yesNoSkip(type, answer){
+      localStorage.setItem(type, answer)
+    };
+
+    /* Fill related parts of the form if answer=yes*/
+    function yesNoFill(type, answer){
+      localStorage.setItem(type, answer)
+      if(answer==="yes"){
+        else if(type="docRecipient"){}
+        else if(type="differentWorkplace"){}
+        else{};
+      }
+      else if(answer==="no"){
+        if (type==="taxConsultant"){
+          localStorage.###
+        } 
+      }
+      else{};
+    };
+
+    /* Check for yesNoSkip Values in order to skip certain Cards */
+    function yesNoCheck(count=0){
+      if(count=1){}
+      else{};
+    };
 
     </script>  
 </section>

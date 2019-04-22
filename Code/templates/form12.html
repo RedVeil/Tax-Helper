@@ -2,9 +2,24 @@
 {% block header %}
 {% endblock %}
 {% block content %}
-<div id="form2" class="formContainer"></div>
-    <form action="" method="POST" id="3">
-
-    </form>
+<div id="container main" class="grid">
+        <div class="textSide">Text</div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Your Finanzamt</h1>
+            </div>
+            <div class="form">
+              <form action="" method="POST" id="form2">
+                  <p>So what do you wanna do?</p><br>
+                  <input id='art_taetigkeit' type='text' name='art_taetigkeit' class='input_field' placeholder="Freelance Job Description" autofocus ><br> 
+              </form>
+              </div>
+            <div class="button">
+                <div class="centerButton">
+                    <a href="/main11" id="back" onclick="back()"><</a>
+                    <a href="/main13" id="submit" class="submit" name="test" onclick="next()">></a>
+                </div>
+            </div>
+        </div>
 </div>
 {% endblock %}

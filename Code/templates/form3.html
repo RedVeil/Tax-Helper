@@ -2,15 +2,28 @@
 {% block header %}
 {% endblock %}
 {% block content %}
-<div id="form2" class="formContainer"></div>
-      <form action="" method="POST" id="3">
-          <input id='tel_int_vorwahl' type='text' name='tel_int_vorwahl' class='input_field'>
-          <input id='vorwahl_tel' type='text' name='vorwahl_tel' class='input_field'>
-          <input id='rufnummer_tel' type='text' name='rufnummer_tel' class='input_field'>
-          <input id='e_mail' type='text' name='e_mail' class='input_field'>
-          <input id='website' type='text' name='website' class='input_field'>
-          <button type="submit" id="back" onclick="back()"><</button>
-          <input id='submit3' type='submit' name='submit' class='submit' value=">">
-        </form>
-    </div>
+<div id="container main" class="grid">
+    <div class="textSide"></div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Personal Informations</h1>
+            </div>
+            <div class="form">
+                <form action="" method="POST" id="3">
+                    <input id='u_current_job' type='text' name='u_current_job' class='input_field'>
+                    <input id='tel_int_vorwahl' type='text' name='tel_int_vorwahl' class='input_field'>
+                    <input id='vorwahl_tel' type='text' name='vorwahl_tel' class='input_field'>
+                    <input id='rufnummer_tel' type='text' name='rufnummer_tel' class='input_field'>
+                    <input id='e_mail' type='text' name='e_mail' class='input_field'>
+                    <input id='website' type='text' name='website' class='input_field'>
+                </form>
+            </div>
+            <div class="button">
+                <div class="centerButton">
+                    <a href="/main2" id="back" onclick="back()"><</a>
+                    <a href="/main4" id="submit" class="submit" name="test" onclick="next()">></a>
+                </div>
+            </div>
+        </div>
+</div>
 {% endblock %}

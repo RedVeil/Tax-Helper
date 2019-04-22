@@ -17,12 +17,13 @@ body {
 h1 {
   margin: 0.5rem auto 0.5rem auto; 
   font-family: sans-serif; 
-  color: #000000;
+  color: #ffffff;
 }
 
 p {
   font-family: sans-serif; 
-  color: black
+  color: black;
+  text-align: center;
 }
 
 /****** Navigation Style *********/
@@ -47,6 +48,7 @@ p {
 }
 
 /****** Body Style *********/
+/*   Grid   */
 .grid {
   margin: 10em auto 12em auto;
   width: 60em;
@@ -54,44 +56,92 @@ p {
   display:grid;
   grid-template: 1fr / 1fr 2fr;
   box-shadow: 10px 10px 5px black;
-  grid-template-areas: 
-}
-
-.formSide{
-  background-color: rgb(124, 124, 124);
-  margin: 0 auto;
-
-  
+  overflow: hidden;
 }
 
 .textSide{
-  width: 20em;
+  width:100%;
   display: grid;
   justify-content: center;
   align-content: center;
   background-color: rgb(153, 51, 51);
 }
 
+/*   Form Side Grid   */
+.formSide{
+  width: 100%;
+  background-color: grey;
+  margin: 0 auto;
+  padding: 0 ;
+  display: grid;
+  grid-template: 1fr 60% 1fr/ 1fr;
+  grid-gap: 1em;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
 
-
-form {
-  width: 40em;
+.title{
+  width: 100%;
+  height:100%;
+  grid-area: 1 / 1 /span 1 /span 1;
+  /*background-color: aqua;*/
   display: grid;
   justify-content: center;
   align-content: center;
 }
 
+.form {
+  width:100%;
+  height:100%;
+  grid-area: 2 / 1 /span 1 /span 1;
+  background-color: peru;
+  display: grid;
+  align-items: center;
+  justify-items: stretch;
+}
+
+form{
+  justify-self: center;
+  display: inline-block;
+}
+
+.button{
+  width:100%;
+  height:100%;
+  grid-area: 3 / 1 /span 1 /span 1;
+  /*background-color: olive;*/
+  display: grid;
+  justify-content: center;
+  align-content: top;
+}
+
+.centerButton{
+  display: inline;
+}
 
 
+/* Special Cases */
 
+
+.yNQuestion{
+  display: grid;
+  margin: 7em auto;
+  justify-items: center;
+  align-items: center;
+}
+
+
+/*   Input   */
 input[type=text]{
+  margin: 1em auto;
   border: none;
   background: white;
   border-bottom: 1px solid rgb(73, 73, 73);}
 
+
 /*   Buttons   */
 #submit{
-  display:inline;
   border: none;
   background-color: rgb(73, 73, 73);
   text-decoration: none;
@@ -108,7 +158,6 @@ input[type=text]{
 }
 
 #back{
-  display:inline;
   border: none;
   background-color: rgb(73, 73, 73);
   text-decoration: none;

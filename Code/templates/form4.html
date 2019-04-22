@@ -2,8 +2,25 @@
 {% block header %}
 {% endblock %}
 {% block content %}
-    <div class="grid">
-      <div class="box">A</div>
-      <div class="box">B</div>
+<div id="container main" class="grid">
+        <div class="textSide"></div>
+            <div class="formSide">
+                <div class="title">
+                    <h1 id="title">Personal Informations</h1>
+                </div>
+                <div class="form">
+                    <form action="" method="POST" id="3">
+                        <input type="radio" id='u_reli' name='u_reli' value="EV" checked> Evangelisch<br>
+                        <input type="radio" id='u_reli' name='u_reli' value="RK"> Römisch-Katolisch<br>
+                        <input type="radio" id='u_reli' name='u_reli' value="VD"> Nicht kirchensteuerpflichtig<br>
+                    </form>
+                </div>
+                <div class="button">
+                    <div class="centerButton">
+                        <a href="/main3" id="back" onclick="back()"><</a>
+                        <a href="/main5" id="submit" class="submit" name="test" onclick="next()">></a>
+                    </div>
+                </div>
     </div>
+</div>
 {% endblock %}
