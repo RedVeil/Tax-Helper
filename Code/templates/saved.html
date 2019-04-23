@@ -2,28 +2,196 @@
 {% block header %}
 {% endblock %}
 {% block content %}
-        <h1 id="title">Your Finanzamt</h1>
-          <form action="" method="POST" id="form2">
-              <input id='finanzamt' type='text' name='finanzamt' class='input_field' placeholder="Finanzamt" autofocus ><br> 
-              <input id='u_firstname' type='text' name='u_firstname' class='input_field' placeholder="First name" onfocus="show()" onblur="hide()">
-              <input id='u_lastname' type='text' name='u_lastname' class='input_field' placeholder="Family name">
-              <input id='u_birth_name' type='text' name='u_birth_name' class='input_field' placeholder="Birth name">
-              <input id='u_birthday' type='text' name='u_birthday' class='input_field' placeholder="Birthday">
-              <input id='u_strasse' type='text' name='u_strasse' class='input_field' placeholder="Street">
-              <input id='u_hausnummer' type='text' name='u_hausnummer' class='input_field' placeholder="House number">
-              <input id='u_hausnummer_zusatz' type='text' name='u_hausnummer_zusatz' class='input_field' placeholder="Add-on">
-              <input id='u_postleitzahl' type='text' name='u_postleitzahl' class='input_field' placeholder="Postal Code">
-              <input id='u_city' type='text' name='u_city' class='input_field' placeholder="City"><br>
-              <input id='u_current_job' type='text' name='u_current_job' class='input_field'>
-              <input id='tel_int_vorwahl' type='text' name='tel_int_vorwahl' class='input_field'>
-              <input id='vorwahl_tel' type='text' name='vorwahl_tel' class='input_field'>
-              <input id='rufnummer_tel' type='text' name='rufnummer_tel' class='input_field'>
-              <input id='e_mail' type='text' name='e_mail' class='input_field'>
-              <input id='website' type='text' name='website' class='input_field'>
-              <input type="submit">
+    <h1 id="title">Your Finanzamt</h1>
+        <div class="saveAllForm">
+            <form action="" method="POST" id="form2">
+                  <h2>About you</h2>
+                  <input id='u_firstname' type='text' name='u_firstname' class='input_field' placeholder="First name">First Name
+                  <input id='u_lastname' type='text' name='u_lastname' class='input_field' placeholder="Last name">Last Name   
+                  <input id='u_birth_name' type='text' name='u_birth_name' class='input_field' placeholder="Birth name">Birth Name
+                  <input id='u_birthday' type='text' name='u_birthday' class='input_field' placeholder="Birthday">Birthday
+                  <input id='finanzamt' type='text' name='finanzamt' class='input_field' placeholder="Finanzamt">Finanzamt
+                  <h3>Adress</h3> 
+                  <input id='u_strasse' type='text' name='u_strasse' class='input_field' placeholder="Street">Street
+                  <input id='u_hausnummer' type='text' name='u_hausnummer' class='input_field' placeholder="House number">House Number
+                  <input id='u_hausnummer_zusatz' type='text' name='u_hausnummer_zusatz' class='input_field' placeholder="House number add on">House Number Addon
+                  <input id='u_postleitzahl' type='text' name='u_postleitzahl' class='input_field' placeholder="Post code">Post Code
+                  <input id='u_city' type='text' name='u_city' class='input_field' placeholder="City">City
+                  <h3>Contact Details</h3>
+                  <input id='tel_int_vorwahl' type='text' name='tel_int_vorwahl' class='input_field' placeholder="Country code">Country Code
+                  <input id='vorwahl_tel' type='text' name='vorwahl_tel' class='input_field' placeholder="Area code">Area Code
+                  <input id='rufnummer_tel' type='text' name='rufnummer_tel' class='input_field' placeholder="Phone number"> Phone number
+                  <input id='e_mail' type='text' name='e_mail' class='input_field' placeholder="Email">Email
+                  <input id='website' type='text' name='website' class='input_field' placeholder="Website">Website
+                  <p>Church Tax</p>
+                  <input type="radio" id='u_reli' name='u_reli' value="EV" checked> Evangelic<br>
+                  <input type="radio" id='u_reli' name='u_reli' value="RK"> Roman Catholic<br>
+                  <input type="radio" id='u_reli' name='u_reli' value="VD"> None<br>
+                  <p>Rest</p>
+                  <input id='u_current_job' type='text' name='u_current_job' class='input_field' placeholder="Job">Job
+                  <input id='u_tax_id' type='text' name='u_tax_id' class='input_field'  placeholder="Tax id"><br>Tax Id
+                
+                 
+                  <h2>Marriage and your Partner</h2>
+                  <input id='marriage_date' type='text' name='marriage_date' class='input_field' placeholder="DD/MM/YYYY">Marriage Date
+                  <p>Partner</p>
+                  <input id='p_firstname' type='text' name='p_firstname' class='input_field' placeholder="First name">First name
+                  <input id='p_lastname' type='text' name='p_lastname' class='input_field' placeholder="Last name">Last Name
+                  <input id='p_birth_name' type='text' name='p_family_name' class='input_field' placeholder="Birth name">Birth Name
+                  <input id='p_birthday' type='text' name='p_birthday' class='input_field' placeholder="Birthday">Birthday
+                  <p>Partner Adress</p>
+                  <input id='p_strasse' type='text' name='p_strasse' class='input_field' placeholder="Street">
+                  <input id='p_hausnummer' type='text' name='p_hausnummer' class='input_field' placeholder="House number">
+                  <input id='p_hausnummer_zusatz' type='text' name='p_hausnummer_zusatz' class='input_field' placeholder="House number add on">
+                  <input id='p_postleitzahl' type='text' name='p_postleitzahl' class='input_field' placeholder="Post code">
+                  <input id='p_city' type='text' name='p_city' class='input_field' placeholder="City">
+                  <p>Church Tax</p>
+                  <input type="radio" id='p_reli' name='p_reli' value="EV" checked> Evangelic</br>
+                  <input type="radio" id='p_reli' name='p_reli' value="RK"> Roman Catholic</br>
+                  <input type="radio" id='p_reli' name='p_reli' value="VD"> None</br>
+                  <p>Rest</p>
+                  <input id='p_current_job' type='text' name='p_current_job' class='input_field'  placeholder="Job title">
+                  <input id='p_tax_id' type='text' name='p_tax_id' class='input_field' placeholder="Tax id">
+                  <p>Previous Marriages</p>
+                  <input id='widow_date' type='text' name='widow_date' class='input_field' placeholder="DD/MM/YYYY">
+                  <input id='divorce_date' type='text' name='divorce_date' class='input_field' placeholder="DD/MM/YYYY">
+                  <input id='seperate_date' type='text' name='seperate_date' class='input_field' placeholder="DD/MM/YYYY">
+
+
+
+                  <h2>Tax Consultant and Document recipient</h2>
+                  <input id='art_taetigkeit' type='text' name='art_taetigkeit' class='input_field' placeholder="Freelance job description">Freelance Job Description<br> 
+                              
               
               
-              
-      </form>
+                  <p>Tax Consultant</p>
+                  <input id='steuerberater' type='text' name='steuerberater' class='input_field' placeholder="Consultant office">
+                  <input id='b_firstname' type='text' name='b_firstname' class='input_field' placeholder="First name">
+                  <input id='b_lastname' type='text' name='b_lastname' class='input_field' placeholder="Last name">
+
+                  <input id='b_strasse' type='text' name='b_strasse' class='input_field' placeholder="Street">
+                  <input id='b_hausnummer' type='text' name='b_hausnummer' class='input_field' placeholder="House number">
+                  <input id='b_hausnummer_zusatz' type='text' name='b_hausnummer_zusatz' class='input_field'placeholder="House number add on">
+                  <input id='b_postleitzahl' type='text' name='b_postleitzahl' class='input_field' placeholder="Post code">
+                  <input id='b_ort' type='text' name='b_ort' class='input_field' placeholder="City">
+                  <p>Do you have there contact details?</p>
+                  <input id='b_tel_int_vorwahl' type='text' name='b_tel_int_vorwahl' class='input_field' placeholder="Country code">
+                  <input id='b_vorwahl_tel' type='text' name='b_vorwahl_tel' class='input_field' placeholder="Area code">
+                  <input id='b_rufnummer_tel' type='text' name='b_rufnummer_tel' class='input_field' placeholder="Phone number">
+                  <input id='b_e_mail' type='text' name='b_e_mail' class='input_field' placeholder="Email">
+
+                  <p>Whats the name of the recipient?...</p>
+                  <input id='e_firstname' type='text' name='e_firstname' class='input_field' placeholder="First name">
+                  <input id='e_lastname' type='text' name='e_lastname' class='input_field' placeholder="Last name">
+                  <p>...and their adress?</p>
+                  <input id='e_strasse' type='text' name='e_strasse' class='input_field' placeholder="Street">
+                  <input id='e_hausnummer' type='text' name='e_hausnummer' class='input_field' placeholder="House number">
+                  <input id='e_hausnummer_zusatz' type='text' name='e_hausnummer_zusatz' class='input_field' placeholder="House number add-on">
+                  <input id='e_postleitzahl' type='text' name='e_postleitzahl' class='input_field' placeholder="Post code">
+                  <input id='e_city' type='text' name='e_city' class='input_field' placeholder="City">
+                  <p>Can you share their contact details?</p>
+                  <input id='e_tel_int_vorwahl' type='text' name='e_tel_int_vorwahl' class='input_field' placeholder="Country code">
+                  <input id='e_vorwahl_tel' type='text' name='e_vorwahl_tel' class='input_field' placeholder="Area code">
+                  <input id='e_rufnummer_tel' type='text' name='e_rufnummer_tel' class='input_field' placeholder="Phone number">
+                  <input id='e_e_mail' type='text' name='e_e_mail' class='input_field' placeholder="Email">                 
+
+                  <input id='migration_date' type='text' name='migration_date' class='input_field' placeholder="DD/MM/YYYY">
+
+                  <p>Where did you live before?</p>
+                  <input id='pre_strasse' type='text' name='pre_strasse' class='input_field' placeholder="Street">
+                  <input id='pre_hausnummer' type='text' name='pre_hausnummer' class='input_field' placeholder="House number">
+                  <input id='pre_hausnummer_zusatz' type='text' name='pre_hausnummer_zusatz' class='input_field'placeholder="House number add on">
+                  <input id='pre_postleitzahl' type='text' name='pre_postleitzahl' class='input_field' placeholder="Post code">
+                  <input id='pre_city' type='text' name='pre_city' class='input_field' placeholder="City">
+
+                  <p>Fill this only if you or your partner lived in germany during the last three years</p>
+                  <input id='pre_finanzamt' type='text' name='pre_finanzamt' class='input_field' placeholder="Tax Office">
+                  <input id='pre_steuernummer' type='text' name='pre_steuernummer' class='input_field' placeholder="Tax id">
+                  
+                  <input id='firm_bezeichnung' type='text' name='firm_bezeichnung' class='input_field' placeholder="Company">
+
+
+                  <p>Where is your workplace?</p></br>
+                  <input id='firm_strasse' type='text' name='firm_strasse' class='input_field' placeholder="Street">
+                  <input id='firm_hausnummer' type='text' name='firm_hausnummer' class='input_field' placeholder="House number"> 
+                  <input id='firm_hausnummer_zusatz' type='text' name='firm_hausnummer_zusatz' class='input_field' placeholder="House number add-on">
+                  <input id='firm_postleitzahl' type='text' name='firm_postleitzahl' class='input_field' placeholder="Post code">
+                  <input id='firm_city' type='text' name='firm_city' class='input_field' placeholder="City">
+                  <p>Would you share there contact details?</p></br>
+                  <input id='firm_tel_int_vorwahl' type='text' name='firm_tel_int_vorwahl' class='input_field' placeholder="Country code">
+                  <input id='firm_vorwahl_tel' type='text' name='firm_vorwahl_tel' class='input_field' placeholder="Area code">
+                  <input id='firm_rufnummer_tel' type='text' name='firm_rufnummer_tel' class='input_field' placeholder="Phone number">
+                  <input id='firm_e_mail' type='text' name='firm_e_mail' class='input_field' placeholder="Email">
+                  <input id='firm_website' type='text' name='firm_website' class='input_field' placeholder="Website">
+
+                  <p>When will you start your new freelance profession?</p></br>
+                  <input id='work_date' type='text' name='work_date' class='input_field' placeholder="DD/MM/YYYY">
+
+                  <p>Bank Details</p>
+                  <input id='iban_de1' type='text' name='iban_de1' class='input_field' placeholder="IBAN DE">
+                  <input id='iban_int1' type='text' name='iban_int1' class='input_field' placeholder="IBAN International">
+                  <input id='bic1' type='text' name='bic1' class='input_field' placeholder="BIC">
+                  <input id='holder1' type='text' name='holder1' class='input_field' placeholder="Holder">      
+
+                  <input id='u_betrag1' type='text' name='u_betrag1' class='input_field' placeholder="Amount in €">Freelancing
+                  <input id='u_betrag2' type='text' name='u_betrag2' class='input_field' placeholder="Amount in €">Non Freelancing
+                  <input id='u_betrag3' type='text' name='u_betrag3' class='input_field' placeholder="Amount in €">Capital gains
+                  <input id='u_betrag4' type='text' name='u_betrag4' class='input_field' placeholder="Amount in €">Other Income
+
+
+                  <input id='u_betrag5' type='text' name='u_betrag5' class='input_field' placeholder="Amount in €">Freelancing
+                  <input id='u_betrag6' type='text' name='u_betrag6' class='input_field' placeholder="Amount in €">Non Freelancing
+                  <input id='u_betrag7' type='text' name='u_betrag7' class='input_field' placeholder="Amount in €">Capital gains
+                  <input id='u_betrag8' type='text' name='u_betrag8' class='input_field' placeholder="Amount in €">Other Income
+
+                  <p>The expected amount of "special" expenses for the first year?</p></br>
+                  <input id='u_sonderausgaben1' type='text' name='u_sonderausgaben1' class='input_field' placeholder="Amount in €">Special Expenses
+                  <input id='u_steuerabzug1' type='text' name='u_steuerabzug1' class='input_field' placeholder="Amount in €">Tax deductions
+                  <p>Your expected amount of "special" expenses for the first year?</p></br>
+                  <input id='u_sonderausgaben2' type='text' name='u_sonderausgaben2' class='input_field' placeholder="Amount in €">Special Expenses
+                  <input id='u_steuerabzug2' type='text' name='u_steuerabzug2' class='input_field' placeholder="Amount in €">Tax deductions
+                  
+                  <input id='sum1' type='text' name='sum1' class='input_field' placeholder="Amount in €">
+                  <input id='sum2' type='text' name='sum2' class='input_field' placeholder="Amount in €">
+
+                  <input id='p_betrag1' type='text' name='p_betrag1' class='input_field' placeholder="Amount in €">Freelancing    
+                  <input id='p_betrag2' type='text' name='p_betrag2' class='input_field' placeholder="Amount in €">Non Freelancing
+                  <input id='p_betrag3' type='text' name='p_betrag3' class='input_field' placeholder="Amount in €">Capital gains
+                  <input id='p_betrag4' type='text' name='p_betrag4' class='input_field' placeholder="Amount in €">Other Income
+
+                  <input id='p_betrag1' type='text' name='p_betrag1' class='input_field' placeholder="Amount in €">Freelancing
+                  <input id='p_betrag2' type='text' name='p_betrag2' class='input_field' placeholder="Amount in €">Non Freelancing
+                  <input id='p_betrag3' type='text' name='p_betrag3' class='input_field' placeholder="Amount in €">Capital gains
+                  <input id='p_betrag4' type='text' name='p_betrag4' class='input_field' placeholder="Amount in €">Other Income
+
+                  <input id='u_sonderausgaben1' type='text' name='u_sonderausgaben1' class='input_field' placeholder="Amount in €" >Special Expenses
+                  <input id='u_steuerabzug1' type='text' name='u_steuerabzug1' class='input_field' placeholder="Amount in €">Tax deductions
+                  <p>Your expected amount of "special" expenses of your Partner for the first year?</p></br>
+                  <input id='u_sonderausgaben2' type='text' name='u_sonderausgaben2' class='input_field' placeholder="Amount in €">Special Expenses
+                  <input id='u_steuerabzug2' type='text' name='u_steuerabzug2' class='input_field' placeholder="Amount in €">Tax deductions
+
+
+                  <input id='sonstig' type='text' name='sonstig' class='input_field' placeholder="Description">
+
+
+                  <p>Tell us if you have any tax exemption</p>
+                  <input id='steuerbefreiung' type='text' name='steuerbefreiung' class='input_field' placeholder="Description" >
+                  <input id='steuerbefreiung_art' type='text' name='steuerbefreiung_art' class='input_field' placeholder="Article">
+                  <p>Tell us if you have a different tax rate</p>
+                  <input id='steuersatz' type='text' name='steuersatz' class='input_field' placeholder="Description">
+                  <input id='steuersatz_art' type='text' name='steuersatz_art' class='input_field' placeholder="Arcticle">
+
+
+
+                  <input id='pre_ustid' type='text' name='pre_ustid' class='input_field' placeholder="Sales tax id" >
+                  <p>When did you got it?</p>
+                  <input id='pre_ustid_date' type='text' name='pre_ustid_date' class='input_field' placeholder="DD/MM/YYYY">
+
+                  <input id='city and date' type='text' name='city and date' class='input_field' placeholder="City, DD/MM/YYYY" >
+         
+                  <input type="submit">
+            </form>
+        </div>
+     
 
 {% endblock %}

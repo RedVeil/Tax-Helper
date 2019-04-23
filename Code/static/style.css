@@ -23,7 +23,7 @@ h1 {
 p {
   font-family: sans-serif; 
   color: black;
-  text-align: center;
+  
 }
 
 /****** Navigation Style *********/
@@ -67,6 +67,20 @@ p {
   background-color: rgb(153, 51, 51);
 }
 
+.saveAllForm{
+  width: 100%;
+  background-color: grey;
+  margin: 0 auto;
+  padding: 0 ;
+  display: grid;
+  justify-content: center;
+  align-content: center; 
+}
+
+
+
+
+
 /*   Form Side Grid   */
 .formSide{
   width: 100%;
@@ -99,6 +113,7 @@ p {
   display: grid;
   align-items: center;
   justify-items: stretch;
+  text-align: center;
 }
 
 form{
