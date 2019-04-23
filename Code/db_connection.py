@@ -14,7 +14,7 @@ def write_to_db(key,value):
     db_connection.commit()
     db_cursor.close()
 
-
+#experimental form set up (currently not in use)
 def set_up():
     input_keys = []
     titles = []
@@ -57,7 +57,7 @@ def load_from_db(input_key):
     return x_location, y_location, ID
 
 
-def safe_data_and_retrieve_location():
+def safe_data_and_retrieve_location(json_object):
     page1 = {}
     page2 = {}
     page3 = {}
@@ -65,8 +65,6 @@ def safe_data_and_retrieve_location():
     page5 = {}
     page6 = {}
     page7 = {}
-    with open("test.json", "r") as f:
-        json_object = json.load(f)
     for key in json_object:
         write_to_db(key, json_object[key])
         temp_locations = load_from_db(key)
@@ -87,11 +85,3 @@ def safe_data_and_retrieve_location():
         elif ID >= 601:
             page7[json_object[key]] =  location
     return page1,page2,page3,page4,page5,page6,page7
-
-set_up()
-
-@bp.route('/save', methods=['POST'])
-def get_post_json():    
-    data = request.get_json()
-
-    return jsonify(status="success", data=data)

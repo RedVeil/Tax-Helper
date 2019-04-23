@@ -15,8 +15,8 @@ def make_pdf(image_list):
     
 
 
-def __init__():
-    pages = safe_data_and_retrieve_location()
+def __init__(json_object):
+    pages = safe_data_and_retrieve_location(json_object)
     im_list = []
     for i in range(len(pages)):
         im = Image.open(f"Steuerliche Erfassung-{i+1}.jpg")

@@ -120,6 +120,11 @@ form{
   display: inline;
 }
 
+.yesNo{
+  margin: 2em auto;
+}
+
+
 
 /* Special Cases */
 
@@ -131,6 +136,21 @@ form{
   align-items: center;
 }
 
+#yesNoBtn{
+  border: none;
+  background-color: rgb(73, 73, 73);
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 50%;
+  transition-duration: 0.4s;
+  margin: 0.5rem auto 1rem auto;
+  /*box-shadow: 1px 1px 1px black;*/
+}
+
+#yesNoBtn:hover{
+  background-color: rgb(131, 131, 131);
+}
 
 /*   Input   */
 input[type=text]{

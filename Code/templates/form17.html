@@ -6,15 +6,15 @@
         <div class="textSide">Text</div>
         <div class="formSide">
             <div class="title">
-                <h1 id="title">Tax Consultant Infos</h1>
+                <h1 id="title">Document Recipient</h1>
             </div>
             <div class="form">
               <form action="" method="POST" id="form2">
                     <div class="yNQuestion">
-                            <p>Do you recieve all your Tax relevant Documents?</p></br>
-                            <div class="centerButton">
-                                <a href="/main18" id="germanBtn" onclick="yesNoSkip('docRecipient','no')">No</a>
-                                <a href="/main19" id="germanBtn" class="submit" onclick="yesNoSkip('docRecipient','yes')">Yes</a>
+                            <p>Do you recieve all your tax relevant documents or is someone else handling it?</p></br>
+                            <div class="centerButton yesNo">
+                                <a href="/main18" id="yesNoBtn" onclick="yesNo('docRecipient','no')">Me</a>
+                                <a href="/main19" id="yesNoBtn" class="submit" onclick="yesNo('docRecipient','yes')">Not me</a>
                             </div>
                     </div>
               </form>

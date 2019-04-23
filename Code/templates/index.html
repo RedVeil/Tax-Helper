@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
 {% block header %}
-  <h1>{% block title %}Start Page{% endblock %}</h1>
 {% endblock %}
 {% block content %}
-    <p>what the title says...</p>
-    <a href="/main" id="startBtn" class="submit" name="start" onclick="clear()">Start</a>
+<div id="container main" class="grid">
+    
     </form>
+    <div class="textSide">Text</div>
+    <div class="formSide">
+        <div class="title">
+            <h1 id="title">Start</h1>
+        </div>
+          <div class="yNQuestion">
+            <p>what the title says...</p>
+            <div class="centerButton yesNo">
+              <a href="/main" id="yesNoBtn" class="submit" name="start" onclick="clear()">Start</a>
+            </div>
+          </div>
+        <div class="button">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 {% endblock %}
   

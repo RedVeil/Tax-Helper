@@ -168,13 +168,18 @@ def mainpage38():
 @bp.route('/saved', methods=["GET","POST"])
 def recieve_json():
     if request.method == "POST":
-        data = request.get_json()
-        print(data)
-        return jsonify({"result":data})
-    return render_template("saved.html")
+        data = request.form
 
-@bp.route('/download')
-def download():
-    print_pages.__init__()
-    path = "tesd3.pdf"
-    return send_file(path, as_attachment=True)
+        # short term solution
+        json_dict = {}
+        for i in data:
+            json_dict[i] = data[i]
+        json_object = json_dict
+        # 
+
+        if os.path.isfile("Steuerliche Erfassung.pdf"):
+            os.remove("Steuerliche Erfassung.pdf")
+        print_pages.__init__(json_object)
+        path = "Steuerliche Erfassung.pdf"
+        return send_file(path, as_attachment=True)
+    return render_template("saved.html")

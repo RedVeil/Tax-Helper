@@ -7,7 +7,6 @@
   <ul>
     <li><a href="/">Landing Page</a>
     <li><a href="saved" >Save progress</a>
-    <li><button type="button" onclick="testRedirect()">Save progress</button>
   </ul>
 </nav>
 <section class="content">
@@ -25,6 +24,7 @@
   </body>
 
   <script>
+    /*saves input + ups counter for possible later integration*/
       function next(){
       var counter = localStorage.getItem("counter")
       var newCounter = parseInt(counter)
@@ -35,12 +35,14 @@
       };
     };
 
+  /*shows old previous input + substracts counter for possible later integration*/
     function back(){
       var counter = localStorage.getItem("counter")
       var newCounter = parseInt(counter)
       localStorage.setItem("counter", newCounter -1)
     };
 
+  /*for later use of showing and hiding tooltips
     function show(){
       document.getElementById("testh2").style.visibility = "visible";
     };
@@ -48,38 +50,19 @@
     function hide(){
       document.getElementById("testh2").style.visibility = "hidden";
     };
-
+    */
+  
+  /*clear localStorage beim Start*/
     function clear(){
       localStorage.clear()
     };
 
     /* Set Skip value for certain cards if answer=yes (will be checked with yesNoCheck function)*/
-    function yesNoSkip(type, answer){
+    function yesNo(type, answer){
       localStorage.setItem(type, answer)
     };
 
-    /* Fill related parts of the form if answer=yes*/
-    /*function yesNoFill(type, answer){
-      localStorage.setItem(type, answer)
-      if(answer==="yes"){
-        else if(type="docRecipient"){}
-        else if(type="differentWorkplace"){}
-        else{};
-      }
-      else if(answer==="no"){
-        if (type==="taxConsultant"){
-          localStorage.###
-        } 
-      }
-      else{};
-    };*/
-
-    /* Check for yesNoSkip Values in order to skip certain Cards */
-    function yesNoCheck(count=0){
-      if(count=1){}
-      else{};
-    };
-
+  /*pass all inputs in localStorage do the backend*/
     function saveAll(){
       var storage = JSON.stringify(localStorage)
       console.log(storage)
@@ -88,17 +71,55 @@
           jsonReq.send(storage);
     };
 
-
+  /*skip certain cards (might be expanded later)*/
     function skip(type){
-      if(localStorage.getItem(type) == "no"){
-          if (type == "married"){
-            window.location.replace("/main12") /**/
-          }else{};
-
+      if(type == "married"){
+        if(localStorage.getItem(type)=="yes"){
+          window.location.replace("/main30")
+        }
+        else{window.location.replace("/main33")};
       }
-      else{};
+      else{}; 
+    };
 
-      window.location.replace("/saved")
+  /*fills input which would simply be doubled*/
+    function fill(type){
+      if(type=="docRecipient"){
+        if(localStorage.getItem(type)=="yes"){
+          localStorage.setItem("e_firstname",localStorage.getItem("u_firstname"))
+          localStorage.setItem("e_lastname", localStorage.getItem("u_lastname"))
+          localStorage.setItem("e_strasse", localStorage.getItem("u_strasse"))
+          localStorage.setItem("e_hausnummer", localStorage.getItem("u_hausnummer"))
+          localStorage.setItem("e_hausnummer_zusatz", localStorage.getItem("u_hausnummer_zusatz"))
+          localStorage.setItem("e_adressergaenzung", localStorage.getItem("u_adressergaenzung"))
+          localStorage.setItem("e_postleitzahl", localStorage.getItem("u_postleitzahl"))
+          localStorage.setItem("e_city", localStorage.getItem("u_city"))
+          localStorage.setItem("e_tel_int_vorwahl", localStorage.getItem("tel_int_vorwahl"))
+          localStorage.setItem("e_vorwahl", localStorage.getItem("vorwahl_tel"))
+          localStorage.setItem("e_rufnummer", localStorage.getItem("rufnummer_tel"))
+          localStorage.setItem("e_e_email", localStorage.getItem("e_mail"))
+      }
+        else{};
+      }
+      else if(type=="taxConsultant"){
+        if(localStorage.getItem(type)=="yes"){
+          localStorage.setItem("e_firstname",localStorage.getItem("b_firstname"))
+          localStorage.setItem("e_lastname", localStorage.getItem("b_lastname"))
+          localStorage.setItem("e_strasse", localStorage.getItem("b_strasse"))
+          localStorage.setItem("e_hausnummer", localStorage.getItem("b_hausnummer"))
+          localStorage.setItem("e_hausnummer_zusatz", localStorage.getItem("b_hausnummer_zusatz"))
+          localStorage.setItem("e_adressergaenzung", localStorage.getItem("b_adressergaenzung"))
+          localStorage.setItem("e_postleitzahl", localStorage.getItem("b_postleitzahl"))
+          localStorage.setItem("e_city", localStorage.getItem("b_city"))
+          localStorage.setItem("e_tel_int_vorwahl", localStorage.getItem("b_tel_int_vorwahl"))
+          localStorage.setItem("e_vorwahl", localStorage.getItem("b_vorwahl_tel"))
+          localStorage.setItem("e_rufnummer", localStorage.getItem("b_rufnummer_tel"))
+          localStorage.setItem("e_e_email", localStorage.getItem("b_e_mail"))
+          window.location.replace("/main19")
+        } 
+        else{window.location.replace("/main17")};
+      } 
+      else{}
     };
     </script>  
 </section>
