@@ -10,8 +10,8 @@ def create_ipunts():
 
 
 def create_mainpage_routes():
-    for i in range(10):
-        num=i+11
+    for i in range(18):
+        num=i+21
         print(f"""
     @bp.route('/main{num}', methods=("GET","POST"))
     def mainpage{num}():

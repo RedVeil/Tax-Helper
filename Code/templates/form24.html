@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<div id="container main" class="grid">
+        <div class="textSide">Text</div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Not So Personal Informations</h1>
+            </div>
+            <div class="form">
+              <form action="" method="POST" id="form2">
+                    <p>Company Adress</p></br>
+                    <input id='firm_strasse' type='text' name='firm_strasse' class='input_field'>
+                    <input id='firm_hausnummer' type='text' name='firm_hausnummer' class='input_field'>
+                    <input id='firm_hausnummer_zusatz' type='text' name='firm_hausnummer_zusatz' class='input_field'>
+                    <input id='firm_adressergaenzung' type='text' name='firm_adressergaenzung' class='input_field'>
+                    <input id='firm_postleitzahl' type='text' name='firm_postleitzahl' class='input_field'>
+                    <input id='firm_city' type='text' name='firm_city' class='input_field'>
+                    <p>Company Contact Details</p></br>
+                    <input id='firm_tel_int_vorwahl' type='text' name='firm_tel_int_vorwahl' class='input_field'>
+                    <input id='firm_vorwahl_tel' type='text' name='firm_vorwahl_tel' class='input_field'>
+                    <input id='firm_rufnummer_tel' type='text' name='firm_rufnummer_tel' class='input_field'>
+                    <input id='firm_e_mail' type='text' name='firm_e_mail' class='input_field'>
+                    <input id='firm_website' type='text' name='firm_website' class='input_field'>
+              </form>
+              </div>
+            <div class="button">
+                <div class="centerButton">
+                    <a href="/main23" id="back" onclick="back()"><</a>
+                    <a href="/main25" id="submit" class="submit" name="test" onclick="next()">></a>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

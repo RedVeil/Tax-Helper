@@ -3,24 +3,25 @@
 {% endblock %}
 {% block content %}
 <div id="container main" class="grid">
-    <div class="textSide"></div>
-    <div class="formSide">
-        <div class="title">
-            <h1 id="title">Personal Informations</h1>
-        </div>
-        <div class="form">
-            <form action="" method="POST" id="3">
-                <p>Dates</p>
+        <div class="textSide"></div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Personal Informations</h1>
+            </div>
+            <div class="form">
+              <form action="" method="POST" id="form2">
+                <p>If you have been married before</p>
                 <input id='widow_date' type='text' name='widow_date' class='input_field'>
                 <input id='divorce_date' type='text' name='divorce_date' class='input_field'>
                 <input id='seperate_date' type='text' name='seperate_date' class='input_field'>
-            </form>
-        </div>
-        <div class="button">
-            <div class="centerButton">
-                <a href="/main7" id="back" onclick="back()"><</a>
+              </form>
+              </div>
+            <div class="button">
+              <div class="centerButton">
+                <a href="/main10" id="back" onclick="back()"><</a>
                 <a href="/main12" id="submit" class="submit" name="test" onclick="next()">></a>
+              </div>
             </div>
         </div>
-</div>
+      </div>
 {% endblock %}

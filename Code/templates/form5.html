@@ -3,21 +3,21 @@
 {% endblock %}
 {% block content %}
 <div id="container main" class="grid">
-  <div class="textSide"></div>
-  <div class="formSide">
-      <div class="title">
-          <h1 id="title">Personal Informations</h1>
-      </div>
-      <div class="form">
-        <div class="yNQuestion">
-          <p>Do you have a german Passport?</p></br>
-          <div class="centerButton">
-              <a href="/main7" id="germanBtn" onclick="yesNoSkip('german','no')">No</a>
-              <a href="/main6" id="germanBtn" class="submit" onclick="yesNoSkip('german','yes')">Yes</a>
+        <div class="textSide">Text</div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Your Finanzamt</h1>
+            </div>
+            <div class="form">
+              <form action="" method="POST" id="form2">
+                  <p>Enter your Tax ID here</p><br>
+                  <input id='u_tax_id' type='text' name='u_tax_id' class='input_field' autofocus><br> 
+              </form>
+              </div>
+            <div class="button">
+            <a href="/main4" id="back" onclick="back()"><</a>
+            <a href="/main6" id="submit" class="submit" name="test" onclick="next()">></a>
         </div>
-      </div>
     </div>
-    <div class="button"></div>
-  </div>
 </div>
 {% endblock %}

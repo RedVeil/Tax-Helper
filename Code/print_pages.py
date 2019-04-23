@@ -7,7 +7,7 @@ pdf = FPDF()
 
 
 def make_pdf(image_list):
-    pdf1_filename = "tesd3.pdf"
+    pdf1_filename = "Steuerliche Erfassung.pdf"
     img1 = Image.open("testimg1.jpg")
     img1.save(pdf1_filename, "PDF" ,resolution=100.0, save_all=True, append_images=image_list[1:])
     for i in range(len(image_list)):
@@ -30,9 +30,5 @@ def __init__():
         im.save(f"testimg{i+1}.jpg", quality=50)
         im_list.append(im)
     make_pdf(im_list)
+
     
-
-
-
-
-__init__()

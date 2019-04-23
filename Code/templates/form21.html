@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<div id="container main" class="grid">
+        <div class="textSide">Text</div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Not So Personal Informations</h1>
+            </div>
+            <div class="form">
+              <form action="" method="POST" id="form2">
+                    <p>Fill this only if you or your partner lived in germany the last three years</p>
+                    <input id='pre_finanzamt' type='text' name='pre_finanzamt' class='input_field'>
+                    <input id='pre_steuernummer' type='text' name='pre_steuernummer' class='input_field'>
+              </form>
+              </div>
+            <div class="button">
+                <div class="centerButton">
+                    <a href="/main20" id="back" onclick="back()"><</a>
+                    <a href="/main22" id="submit" class="submit" name="test" onclick="next()">></a>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

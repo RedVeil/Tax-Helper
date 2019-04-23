@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<div id="container main" class="grid">
+        <div class="textSide">Text</div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Not So Personal Informations</h1>
+            </div>
+            <div class="form">
+              <form action="" method="POST" id="form2">
+                    <p>Where did you live before?</p>
+                    <input id='pre_strasse' type='text' name='pre_strasse' class='input_field'>
+                    <input id='pre_hausnummer' type='text' name='pre_hausnummer' class='input_field'>
+                    <input id='pre_hausnummer_zusatz' type='text' name='pre_hausnummer_zusatz' class='input_field'>
+                    <input id='pre_adressergaenzung' type='text' name='pre_adressergaenzung' class='input_field'>
+                    <input id='pre_postleitzahl' type='text' name='pre_postleitzahl' class='input_field'>
+                    <input id='pre_city' type='text' name='pre_city' class='input_field'>
+              </form>
+              </div>
+            <div class="button">
+                <div class="centerButton">
+                    <a href="/main19" id="back" onclick="back()"><</a>
+                    <a href="/main21" id="submit" class="submit" name="test" onclick="next()">></a>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

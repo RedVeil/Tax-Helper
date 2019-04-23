@@ -6,7 +6,8 @@
   <h1>Tax Helper</h1>
   <ul>
     <li><a href="/">Landing Page</a>
-    <li><a href="saved">Save progress</a>
+    <li><a href="saved" >Save progress</a>
+    <li><button type="button" onclick="testRedirect()">Save progress</button>
   </ul>
 </nav>
 <section class="content">
@@ -58,7 +59,7 @@
     };
 
     /* Fill related parts of the form if answer=yes*/
-    function yesNoFill(type, answer){
+    /*function yesNoFill(type, answer){
       localStorage.setItem(type, answer)
       if(answer==="yes"){
         else if(type="docRecipient"){}
@@ -71,7 +72,7 @@
         } 
       }
       else{};
-    };
+    };*/
 
     /* Check for yesNoSkip Values in order to skip certain Cards */
     function yesNoCheck(count=0){
@@ -79,5 +80,25 @@
       else{};
     };
 
+    function saveAll(){
+      var storage = JSON.stringify(localStorage)
+      console.log(storage)
+      var jsonReq = new XMLHttpRequest();
+          jsonReq.open("POST", "127.0.0.1:5000/saved");
+          jsonReq.send(storage);
+    };
+
+
+    function skip(type){
+      if(localStorage.getItem(type) == "no"){
+          if (type == "married"){
+            window.location.replace("/main12") /**/
+          }else{};
+
+      }
+      else{};
+
+      window.location.replace("/saved")
+    };
     </script>  
 </section>

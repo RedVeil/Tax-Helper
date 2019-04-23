@@ -1,1 +1,32 @@
-{"test":"tester"}
+{% extends 'base.html' %}
+{% block header %}
+{% endblock %}
+{% block content %}
+        <h1 id="title">Your Finanzamt</h1>
+          <form action="" method="POST" id="form2">
+              <p>Enter the name of your tax office here</p><br>
+              <input id='finanzamt' type='text' name='finanzamt' class='input_field' placeholder="Finanzamt" autofocus ><br> 
+              <p>I am...</p>
+              <input id='u_firstname' type='text' name='u_firstname' class='input_field' placeholder="First name" onfocus="show()" onblur="hide()">
+              <input id='u_lastname' type='text' name='u_lastname' class='input_field' placeholder="Family name">
+              <p id="testh2">This is my birth name</p>
+              <input id='u_birth_name' type='text' name='u_birth_name' class='input_field' placeholder="Birth name">
+              <input id='u_birthday' type='text' name='u_birthday' class='input_field' placeholder="Birthday">
+              <p>This is were I live...</p>
+              <input id='u_strasse' type='text' name='u_strasse' class='input_field' placeholder="Street">
+              <input id='u_hausnummer' type='text' name='u_hausnummer' class='input_field' placeholder="House number">
+              <input id='u_hausnummer_zusatz' type='text' name='u_hausnummer_zusatz' class='input_field' placeholder="Add-on">
+              <input id='u_postleitzahl' type='text' name='u_postleitzahl' class='input_field' placeholder="Postal Code">
+              <input id='u_city' type='text' name='u_city' class='input_field' placeholder="City"><br>
+              <input id='u_current_job' type='text' name='u_current_job' class='input_field'>
+              <input id='tel_int_vorwahl' type='text' name='tel_int_vorwahl' class='input_field'>
+              <input id='vorwahl_tel' type='text' name='vorwahl_tel' class='input_field'>
+              <input id='rufnummer_tel' type='text' name='rufnummer_tel' class='input_field'>
+              <input id='e_mail' type='text' name='e_mail' class='input_field'>
+              <input id='website' type='text' name='website' class='input_field'>
+              
+              
+              
+      </form>
+
+{% endblock %}
