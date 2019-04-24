@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<div class="saveGrid">
+        <h1 id="title">Save</h1>
+        <div class="saveAllForm"> 
+            <div class="flex-container2">
+                <input id='u_firstname' type='text' name='u_firstname' class='input_field' placeholder="First name">
+                <input id='u_lastname' type='text' name='u_lastname' class='input_field' placeholder="Last name">
+            </div> 
+            <div class="flex-container2">
+                <input id='u_birth_name' type='text' name='u_birth_name' class='input_field' placeholder="Birth name">
+                <input id='u_birthday' type='text' name='u_birthday' class='input_field' placeholder="Birthday">
+            </div> 
+            <div class="flex-container2">
+                <input id='finanzamt' type='text' name='finanzamt' class='input_field' placeholder="Finanzamt">
+                <input id='u_strasse' type='text' name='u_strasse' class='input_field' placeholder="Street">
+                <input id='u_hausnummer' type='text' name='u_hausnummer' class='shortNum' placeholder="Nr">
+                <input id='u_hausnummer_zusatz' type='text' name='u_hausnummer_zusatz' class='shortNum'placeholder="House number add on"> 
+            </div>    
+            <div class="flex-container2">
+                    
+            </div>
+        </div>
+</div>
+{% endblock %}
