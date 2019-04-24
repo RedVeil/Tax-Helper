@@ -169,7 +169,6 @@ def mainpage38():
 def recieve_json():
     if request.method == "POST":
         data = request.form
-
         # short term solution
         json_dict = {}
         for i in data:

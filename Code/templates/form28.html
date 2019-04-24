@@ -3,7 +3,7 @@
 {% endblock %}
 {% block content %}
 <div id="container main" class="grid">
-        <div class="textSide">Text</div>
+        <div class="textSide"></div>
         <div class="formSide">
             <div class="title">
                 <h1 id="title">Exptected Income</h1>
@@ -11,11 +11,11 @@
             <div class="form">
               <form action="" method="POST" id="form2">
                     <p>The expected amount of "special" expenses for the first year?</p></br>
-                    <input id='u_sonderausgaben1' type='text' name='u_sonderausgaben1' class='input_field' placeholder="Amount in €" autofocus>Special Expenses
-                    <input id='u_steuerabzug1' type='text' name='u_steuerabzug1' class='input_field' placeholder="Amount in €">Tax deductions
-                    <p>Your expected amount of "special" expenses for the first year?</p></br>
-                    <input id='u_sonderausgaben2' type='text' name='u_sonderausgaben2' class='input_field' placeholder="Amount in €">Special Expenses
-                    <input id='u_steuerabzug2' type='text' name='u_steuerabzug2' class='input_field' placeholder="Amount in €">Tax deductions
+                    <input id='u_sonderausgaben1' type='text' name='u_sonderausgaben1' class='largeNum' placeholder="Amount in €" autofocus><label for="u_sonderausgaben1">Special Expenses</label>
+                    <input id='u_steuerabzug1' type='text' name='u_steuerabzug1' class='largeNum' placeholder="Amount in €"><label for="u_steuerabzug1">Tax deductions</label></br>
+                    <p>The expected amount of "special" expenses for the second year?</p></br>
+                    <input id='u_sonderausgaben2' type='text' name='u_sonderausgaben2' class='largeNum' placeholder="Amount in €"><label for="u_sonderausgaben2">Special Expenses</label>
+                    <input id='u_steuerabzug2' type='text' name='u_steuerabzug2' class='largeNum' placeholder="Amount in €"><label for="u_steuerabzug2">Tax deductions</label>
               </form>
               </div>
             <div class="button">

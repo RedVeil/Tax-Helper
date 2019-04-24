@@ -272,21 +272,6 @@ input:focus{
   background-color: #992323;
 }
 
-#blackBtn{
-  border: none;
-  background-color: white;
-  text-decoration: none;
-  color: black;
-  padding: 0.5rem 0.75rem;
-  border-radius: 50%;
-  transition-duration: 0.4s;
-  margin: 0.5rem auto 1rem auto;
-}
-
-#blackBtn:hover{
-  background-color: #4D1212;
-  color:white;
-}
 
 /*   Input-Fields   */
 
