@@ -215,7 +215,8 @@ legend{
   text-decoration: none;
   color: white;
   padding: 0.5rem 0.75rem;
-  border-radius: 50%;
+  border: none;
+  border-radius: 1em;
   transition-duration: 0.4s;
   margin: 0.5rem auto 1rem auto;
   /*box-shadow: 1px 1px 2px #182833;*/
