@@ -6,23 +6,20 @@
         <div class="textSide"></div>
         <div class="formSide">
             <div class="title">
-                <h1 id="title">Your Bank Account</h1>
+                <h1 id="title">Your Partner</h1>
             </div>
             <div class="form">
-              <form action="" method="POST" id="form2">
-                    <p>Please share your bank details with us.</p>
-                    <input id='iban_de1' type='text' name='iban_de1' class='input_field' placeholder="IBAN DE" autofocus>
-                    <input id='iban_int1' type='text' name='iban_int1' class='input_field' placeholder="IBAN International">
-                    <input id='bic1' type='text' name='bic1' class='input_field' placeholder="BIC">
-                    <input id='holder1' type='text' name='holder1' class='input_field' placeholder="Holder">                    
-              </form>
-              </div>
-            <div class="button">
-                <div class="centerButton">
-                    <a href="/main12" id="back" onclick="back()"><</a>
-                    <a href="/main14" id="submit" class="submit" name="test" onclick="next()">></a>
-                </div>
+                <form action="" method="POST" id="form2">
+                  <p>What is there current job?</p>
+                  <input id='p_current_job' type='text' name='p_current_job' class='input_field'  placeholder="Job title" autofocus>
+                </form>
             </div>
+            <div class="button">
+              <div class="centerButton">
+                <a href="/main12" id="back" onclick="back()"><</a>
+                <a href="/main14" id="submit" class="submit" name="test" onclick="next()">></a>
+            </div>
+          </div>
         </div>
-</div>
+      </div>
 {% endblock %}

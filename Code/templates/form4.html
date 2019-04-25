@@ -3,21 +3,24 @@
 {% endblock %}
 {% block content %}
 <div id="container main" class="grid">
-  <div class="textSide"></div>
-  <div class="formSide">
-      <div class="title">
-          <h1 id="title">Personal Informations</h1>
-      </div>
-      <div class="form">
-        <div class="yNQuestion">
-          <p>Do you have a german Passport?</p></br>
-          <div class="centerButton yesNo">
-              <a href="/main6" id="yesNoBtn" onclick="yesNo('german','no')">No</a>
-              <a href="/main5" id="yesNoBtn" class="submit" onclick="yesNo('german','yes')">Yes</a>
+    <div class="textSide"></div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Personal Informations</h1>
+            </div>
+            <div class="form">
+                <form action="" method="POST" id="3">
+                    <p>And your phone number?</p>
+                    <input id='tel_int_vorwahl' type='text' name='tel_int_vorwahl' class='input_field' placeholder="Country code" autofocus>
+                    <input id='vorwahl_tel' type='text' name='vorwahl_tel' class='input_field' placeholder="Area code">
+                    <input id='rufnummer_tel' type='text' name='rufnummer_tel' class='input_field' placeholder="Phone number">
+            </div>
+            <div class="button">
+                <div class="centerButton">
+                    <a href="/main3" id="back" onclick="back()"><</a>
+                    <a href="/main5" id="submit" class="submit" name="test" onclick="next()">></a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="button"></div>
-  </div>
 </div>
 {% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<div id="container main" class="grid">
+        <div class="textSide"></div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Unique Tax Law</h1>
+            </div>
+            <div class="form">
+              <form action="" method="POST" id="form2">
+                    <p>Tell us if you have a different tax rate</p>
+                    <input id='steuersatz' type='text' name='steuersatz' class='input_field' placeholder="Description" autofocus>
+                    <input id='steuersatz_art' type='text' name='steuersatz_art' class='input_field' placeholder="Arcticle">
+              </form>
+              </div>
+            <div class="button">
+                <div class="centerButton">
+                        <a href="/main46" id="back" onclick="back()"><</a>
+                        <a href="/main48" id="submit" class="submit" name="test" onclick="next()">></a>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

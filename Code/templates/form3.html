@@ -3,32 +3,23 @@
 {% endblock %}
 {% block content %}
 <div id="container main" class="grid">
-        <div class="textSide"></div>
-            <div class="formSide">
-                <div class="title">
-                    <h1 id="title">Personal Informations</h1>
+    <div class="textSide"></div>
+        <div class="formSide">
+            <div class="title">
+                <h1 id="title">Personal Informations</h1>
+            </div>
+            <div class="form">
+                <form action="" method="POST" id="3">
+                    <p>Whats your current (main) Job?</p>
+                    <input id='u_current_job' type='text' name='u_current_job' class='input_field' placeholder="Job" autofocus>
+                </form>
+            </div>
+            <div class="button">
+                <div class="centerButton">
+                    <a href="/main2" id="back" onclick="back()"><</a>
+                    <a href="/main4" id="submit" class="submit" name="test" onclick="next()">></a>
                 </div>
-                <div class="form">
-                    <form action="" method="POST" id="3">
-                        <div class="yNQuestion">
-                        <p>Do you have to pay church tax?</p>
-                                <div class="center">
-                                    <input type="radio" id='u_reli' name='u_reli' value="EV">
-                                    <label for="EV">Evangelic</label><br>
-                                    <input type="radio" id='u_reli' name='u_reli' value="RK">
-                                    <label for="EV">Roman Catholic</label><br>
-                                    <input type="radio" id='u_reli' name='u_reli' value="VD" checked>
-                                    <label for="EV">None</label><br>
-                                </div>
-                            </div>
-                    </form>
-                </div>
-                <div class="button">
-                    <div class="centerButton">
-                        <a href="/main2" id="back" onclick="back()"><</a>
-                        <a href="/main4" id="submit" class="submit" name="test" onclick="next()">></a>
-                    </div>
-                </div>
-    </div>
+            </div>
+        </div>
 </div>
 {% endblock %}

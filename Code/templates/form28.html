@@ -6,22 +6,18 @@
         <div class="textSide"></div>
         <div class="formSide">
             <div class="title">
-                <h1 id="title">Exptected Income</h1>
+                <h1 id="title">Migration Date</h1>
             </div>
             <div class="form">
               <form action="" method="POST" id="form2">
-                    <p>The expected amount of "special" expenses for the first year?</p></br>
-                    <input id='u_sonderausgaben1' type='text' name='u_sonderausgaben1' class='largeNum' placeholder="Amount in €" autofocus><label for="u_sonderausgaben1">Special Expenses</label>
-                    <input id='u_steuerabzug1' type='text' name='u_steuerabzug1' class='largeNum' placeholder="Amount in €"><label for="u_steuerabzug1">Tax deductions</label></br>
-                    <p>The expected amount of "special" expenses for the second year?</p></br>
-                    <input id='u_sonderausgaben2' type='text' name='u_sonderausgaben2' class='largeNum' placeholder="Amount in €"><label for="u_sonderausgaben2">Special Expenses</label>
-                    <input id='u_steuerabzug2' type='text' name='u_steuerabzug2' class='largeNum' placeholder="Amount in €"><label for="u_steuerabzug2">Tax deductions</label>
+                    <p>When did you move here?</p>
+                    <input id='migration_date' type='text' name='migration_date' class='input_field' placeholder="DD/MM/YYYY" autofocus>
               </form>
               </div>
             <div class="button">
                 <div class="centerButton">
                     <a href="/main27" id="back" onclick="back()"><</a>
-                    <a href="/main29" id="submit" class="submit" name="test" onclick="next()">></a>
+                    <a href="/main29" id="submit" class="submit" onclick="fill('docRecipient')">></a>
                 </div>
             </div>
         </div>

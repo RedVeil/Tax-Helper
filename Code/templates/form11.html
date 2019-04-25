@@ -9,19 +9,20 @@
                 <h1 id="title">Your Partner</h1>
             </div>
             <div class="form">
-              <form action="" method="POST" id="form2">
-                <p>Fill this only If you have been married before and dont live together now.</p>
-                <input id='widow_date' type='text' name='widow_date' class='input_field' placeholder="DD/MM/YYYY" autofocus>
-                <input id='divorce_date' type='text' name='divorce_date' class='input_field' placeholder="DD/MM/YYYY">
-                <input id='seperate_date' type='text' name='seperate_date' class='input_field' placeholder="DD/MM/YYYY">
-              </form>
-              </div>
+                <form action="" method="POST" id="form2">
+                  <p>Who is your Partner?</p>
+                  <input id='p_firstname' type='text' name='p_firstname' class='input_field' placeholder="First name" autofocus>
+                  <input id='p_lastname' type='text' name='p_lastname' class='input_field' placeholder="Last name">
+                  <input id='p_birth_name' type='text' name='p_family_name' class='input_field' placeholder="Birth name">
+                  <input id='p_birthday' type='text' name='p_birthday' class='input_field' placeholder="Birthday">
+                </form>
+            </div>
             <div class="button">
               <div class="centerButton">
                 <a href="/main10" id="back" onclick="back()"><</a>
                 <a href="/main12" id="submit" class="submit" name="test" onclick="next()">></a>
-              </div>
             </div>
+          </div>
         </div>
       </div>
 {% endblock %}

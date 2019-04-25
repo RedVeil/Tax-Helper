@@ -10,15 +10,25 @@ def create_ipunts():
 
 
 def create_mainpage_routes():
-    for i in range(18):
-        num=i+21
+    for i in range(13):
+        num=i+38
         print(f"""
     @bp.route('/main{num}', methods=("GET","POST"))
     def mainpage{num}():
         return render_template("form{num}.html")""")
 
+def create_buttons():
+    for i in range(35):
+        num=i+16
+        num2=i+18
+        print(f"""
+        <a href="/main{num}" id="back" onclick="back()"><</a>
+        <a href="/main{num2}" id="submit" class="submit" name="test" onclick="next()">></a>""")
+        
+
+
 def __init__():
-    create_mainpage_routes()  
+    create_buttons()
 
 
 __init__()

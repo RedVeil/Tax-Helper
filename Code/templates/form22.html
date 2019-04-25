@@ -6,19 +6,24 @@
         <div class="textSide"></div>
         <div class="formSide">
             <div class="title">
-                <h1 id="title">Workplace</h1>
+                <h1 id="title">Tax Consultant</h1>
             </div>
             <div class="form">
               <form action="" method="POST" id="form2">
-                    <div class="yNQuestion">
-                            <p>Do you want to recieve your Documents in a different adress than your home?</p></br>
-                            <div class="centerButton yesNo">
-                                <a href="/main25" id="yesNoBtn" onclick="yesNo('difFirmAdress','no')">Home</a>
-                                <a href="/main23" id="yesNoBtn" class="submit" onclick="yesNo('difFirmAdress','yes')">Somewhere else</a>
-                            </div>
-                    </div>
+                    <p>Where are they located?</p>
+                    <input id='b_strasse' type='text' name='b_strasse' class='input_field' placeholder="Street" autofocus>
+                    <input id='b_hausnummer' type='text' name='b_hausnummer' class='input_field' placeholder="House number">
+                    <input id='b_hausnummer_zusatz' type='text' name='b_hausnummer_zusatz' class='input_field'placeholder="House number add on">
+                    <input id='b_postleitzahl' type='text' name='b_postleitzahl' class='input_field' placeholder="Post code">
+                    <input id='b_ort' type='text' name='b_ort' class='input_field' placeholder="City">
               </form>
               </div>
+            <div class="button">
+                <div class="centerButton">
+                    <a href="/main21" id="back" onclick="back()"><</a>
+                    <a href="/main23" id="submit" class="submit" name="test" onclick="next()">></a>
+                </div>
+            </div>
         </div>
 </div>
 {% endblock %}

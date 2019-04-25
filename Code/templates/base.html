@@ -91,7 +91,6 @@
           localStorage.setItem("e_strasse", localStorage.getItem("u_strasse"))
           localStorage.setItem("e_hausnummer", localStorage.getItem("u_hausnummer"))
           localStorage.setItem("e_hausnummer_zusatz", localStorage.getItem("u_hausnummer_zusatz"))
-          localStorage.setItem("e_adressergaenzung", localStorage.getItem("u_adressergaenzung"))
           localStorage.setItem("e_postleitzahl", localStorage.getItem("u_postleitzahl"))
           localStorage.setItem("e_city", localStorage.getItem("u_city"))
           localStorage.setItem("e_tel_int_vorwahl", localStorage.getItem("tel_int_vorwahl"))
@@ -108,18 +107,33 @@
           localStorage.setItem("e_strasse", localStorage.getItem("b_strasse"))
           localStorage.setItem("e_hausnummer", localStorage.getItem("b_hausnummer"))
           localStorage.setItem("e_hausnummer_zusatz", localStorage.getItem("b_hausnummer_zusatz"))
-          localStorage.setItem("e_adressergaenzung", localStorage.getItem("b_adressergaenzung"))
           localStorage.setItem("e_postleitzahl", localStorage.getItem("b_postleitzahl"))
           localStorage.setItem("e_city", localStorage.getItem("b_city"))
           localStorage.setItem("e_tel_int_vorwahl", localStorage.getItem("b_tel_int_vorwahl"))
           localStorage.setItem("e_vorwahl", localStorage.getItem("b_vorwahl_tel"))
           localStorage.setItem("e_rufnummer", localStorage.getItem("b_rufnummer_tel"))
           localStorage.setItem("e_e_email", localStorage.getItem("b_e_mail"))
-          window.location.replace("/main19")
-        } 
-        else{window.location.replace("/main17")};
+          window.location.replace("/main28")
+          } 
+          else{};
+      }  
+      else if(type=="difFirmAdress"){
+        if(localStorage.getItem(type)=="no"){
+          localStorage.setItem("firm_bezeichnung", localStorage.getItem("u_firstname") + localStorage.getItem("u_lastname"))
+          localStorage.setItem("firm_strasse", localStorage.getItem("u_strasse"))
+          localStorage.setItem("firm_hausnummer", localStorage.getItem("u_hausnummer"))
+          localStorage.setItem("firm_hausnummer_zusatz", localStorage.getItem("u_hausnummer_zusatz"))
+          localStorage.setItem("firm_postleitzahl", localStorage.getItem("u_postleitzahl"))
+          localStorage.setItem("firm_city", localStorage.getItem("u_city"))
+          localStorage.setItem("firm_tel_int_vorwahl", localStorage.getItem("u_tel_int_vorwahl"))
+          localStorage.setItem("firm_vorwahl", localStorage.getItem("u_vorwahl_tel"))
+          localStorage.setItem("firm_rufnummer", localStorage.getItem("u_rufnummer_tel"))
+          localStorage.setItem("firm_e_email", localStorage.getItem("u_e_mail"))
+          window.location.replace("/main36")
+        }
+        else{};
       } 
-      else{}
+      else{};
     };
     </script>  
 </section>

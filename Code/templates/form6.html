@@ -4,20 +4,31 @@
 {% block content %}
 <div id="container main" class="grid">
         <div class="textSide"></div>
-        <div class="formSide">
-            <div class="title">
-                <h1 id="title">Personal Informations</h1>
-            </div>
-            <div class="form">
-              <div class="yNQuestion">
-                <p>Are you married?</p></br>
-                <div class="centerButton yesNo">
-                    <a href="/main11" id="yesNoBtn" onclick="yesNo('married','no')">No</a>
-                    <a href="/main7" id="yesNoBtn" class="submit" onclick="yesNo('married','yes')">Yes</a>
-              </div>
-            </div>
-            <div class="button"></div>
-            </div>
-        </div>
-      </div>
+            <div class="formSide">
+                <div class="title">
+                    <h1 id="title">Personal Informations</h1>
+                </div>
+                <div class="form">
+                    <form action="" method="POST" id="3">
+                        <div class="yNQuestion">
+                        <p>Do you have to pay church tax?</p>
+                                <div class="center">
+                                    <input type="radio" id='u_reli' name='u_reli' value="EV">
+                                    <label for="EV">Evangelic</label><br>
+                                    <input type="radio" id='u_reli' name='u_reli' value="RK">
+                                    <label for="EV">Roman Catholic</label><br>
+                                    <input type="radio" id='u_reli' name='u_reli' value="VD" checked>
+                                    <label for="EV">None</label><br>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+                <div class="button">
+                    <div class="centerButton">
+                        <a href="/main5" id="back" onclick="back()"><</a>
+                        <a href="/main7" id="submit" class="submit" name="test" onclick="next()">></a>
+                    </div>
+                </div>
+    </div>
+</div>
 {% endblock %}

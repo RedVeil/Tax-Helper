@@ -3,23 +3,21 @@
 {% endblock %}
 {% block content %}
 <div id="container main" class="grid">
-        <div class="textSide"></div>
-        <div class="formSide">
-            <div class="title">
-                <h1 id="title">Personal Informations</h1>
-            </div>
-            <div class="form">
-              <form action="" method="POST" id="form2">
-                    <p>Since when?</p>
-                    <input id='marriage_date' type='text' name='marriage_date' class='input_field' placeholder="DD/MM/YYYY" autofocus>
-              </form>
-              </div>
-            <div class="button">
-              <div class="centerButton">
-                <a href="/main6" id="back" onclick="back()"><</a>
-                <a href="/main8" id="submit" class="submit" name="test" onclick="next()">></a>
-              </div>
-            </div>
+  <div class="textSide"></div>
+  <div class="formSide">
+      <div class="title">
+          <h1 id="title">Personal Informations</h1>
+      </div>
+      <div class="form">
+        <div class="yNQuestion">
+          <p>Do you have a german Passport?</p></br>
+          <div class="centerButton yesNo">
+              <a href="/main9" id="yesNoBtn" onclick="yesNo('german','no')">No</a>
+              <a href="/main8" id="yesNoBtn" class="submit" onclick="yesNo('german','yes')">Yes</a>
         </div>
       </div>
+    </div>
+    <div class="button"></div>
+  </div>
+</div>
 {% endblock %}

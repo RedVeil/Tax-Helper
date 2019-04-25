@@ -6,18 +6,20 @@
         <div class="textSide"></div>
         <div class="formSide">
             <div class="title">
-                <h1 id="title">Tax Consultant</h1>
+                <h1 id="title">Your Partner</h1>
             </div>
             <div class="form">
-              <div class="yNQuestion">
-                <p>Do you have a Tax Consultant?</p></br>
-                <div class="centerButton yesNo">
-                    <a href="/main17" id="yesNoBtn" onclick="yesNo('taxConsultant','no')">No</a>
-                    <a href="/main15" id="yesNoBtn" class="submit" onclick="yesNo('taxConsultant','yes')">Yes</a>
-              </div>
+                <form action="" method="POST" id="form2">
+                  <p>Do they have a german tax-id?</p>
+                  <input id='p_tax_id' type='text' name='p_tax_id' class='input_field' placeholder="Tax id" autofocus>
+                </form>
             </div>
-            <div class="button"></div>
+            <div class="button">
+              <div class="centerButton">
+                <a href="/main13" id="back" onclick="back()"><</a>
+                <a href="/main15" id="submit" class="submit" name="test" onclick="next()">></a>
             </div>
+          </div>
         </div>
       </div>
 {% endblock %}

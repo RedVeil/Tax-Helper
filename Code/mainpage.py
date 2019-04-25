@@ -162,7 +162,57 @@ def mainpage37():
 def mainpage38():
     return render_template("form38.html")
 
+@bp.route('/main39', methods=("GET","POST"))
+def mainpage39():
+    return render_template("form39.html")
 
+@bp.route('/main40', methods=("GET","POST"))
+def mainpage40():
+    return render_template("form40.html")
+
+@bp.route('/main41', methods=("GET","POST"))
+def mainpage41():
+    return render_template("form41.html")
+
+@bp.route('/main42', methods=("GET","POST"))
+def mainpage42():
+    return render_template("form42.html")
+
+@bp.route('/main43', methods=("GET","POST"))
+def mainpage43():
+    return render_template("form43.html")
+
+@bp.route('/main44', methods=("GET","POST"))
+def mainpage44():
+    return render_template("form44.html")
+
+@bp.route('/main45', methods=("GET","POST"))
+def mainpage45():
+    return render_template("form45.html")
+
+@bp.route('/main46', methods=("GET","POST"))
+def mainpage46():
+    return render_template("form46.html")
+
+@bp.route('/main47', methods=("GET","POST"))
+def mainpage47():
+    return render_template("form47.html")
+
+@bp.route('/main48', methods=("GET","POST"))
+def mainpage48():
+    return render_template("form48.html")
+
+@bp.route('/main49', methods=("GET","POST"))
+def mainpage49():
+    return render_template("form49.html")
+
+@bp.route('/main50', methods=("GET","POST"))
+def mainpage50():
+    return render_template("form50.html")
+
+@bp.route('/main51', methods=("GET","POST"))
+def mainpage51():
+    return render_template("form51.html")
 
 
 @bp.route('/saved', methods=["GET","POST"])

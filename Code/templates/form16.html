@@ -6,29 +6,22 @@
         <div class="textSide"></div>
         <div class="formSide">
             <div class="title">
-                <h1 id="title">Tax Consultant</h1>
+                <h1 id="title">Your Partner</h1>
             </div>
             <div class="form">
               <form action="" method="POST" id="form2">
-                    <p>Where are they located?</p>
-                    <input id='b_strasse' type='text' name='b_strasse' class='input_field' placeholder="Street" autofocus>
-                    <input id='b_hausnummer' type='text' name='b_hausnummer' class='input_field' placeholder="House number">
-                    <input id='b_hausnummer_zusatz' type='text' name='b_hausnummer_zusatz' class='input_field'placeholder="House number add on">
-                    <input id='b_postleitzahl' type='text' name='b_postleitzahl' class='input_field' placeholder="Post code">
-                    <input id='b_ort' type='text' name='b_ort' class='input_field' placeholder="City">
-                    <p>Do you have there contact details?</p>
-                    <input id='b_tel_int_vorwahl' type='text' name='b_tel_int_vorwahl' class='input_field' placeholder="Country code">
-                    <input id='b_vorwahl_tel' type='text' name='b_vorwahl_tel' class='input_field' placeholder="Area code">
-                    <input id='b_rufnummer_tel' type='text' name='b_rufnummer_tel' class='input_field' placeholder="Phone number">
-                    <input id='b_e_mail' type='text' name='b_e_mail' class='input_field' placeholder="Email">
+                <p>Fill this only If you have been married before and dont live together now.</p>
+                <input id='widow_date' type='text' name='widow_date' class='input_field' placeholder="DD/MM/YYYY" autofocus>
+                <input id='divorce_date' type='text' name='divorce_date' class='input_field' placeholder="DD/MM/YYYY">
+                <input id='seperate_date' type='text' name='seperate_date' class='input_field' placeholder="DD/MM/YYYY">
               </form>
               </div>
             <div class="button">
-                <div class="centerButton">
-                    <a href="/main15" id="back" onclick="back()"><</a>
-                    <button type="button" id="submit" class="submit" onclick="fill('taxConsultant')">></button>
-                </div>
+              <div class="centerButton">
+                  <a href="/main15" id="back" onclick="back()"><</a>
+                  <a href="/main17" id="submit" class="submit" name="test" onclick="next()">></a>
+              </div>
             </div>
         </div>
-</div>
+      </div>
 {% endblock %}
